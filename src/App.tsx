@@ -1,35 +1,162 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { ReactGrid } from "./core";
+import { PortlogicsTestGrid } from "./test/PortlogicsTestGrid";
+import {
+  config,
+  disabledInitialFocusLocationConfig,
+  disableVirtualScrolling,
+  enableAdditionalContentConfig,
+  enableAdditionalContentWithFlexRowConfig,
+  enableBottomRightResponsiveSticky,
+  enableBottomRightResponsiveStickyPinnedToBody,
+  enablePinnedToBodyConfig,
+  enableSpannedCells,
+  enableSymetric,
+  enableTopLeftResponsiveSticky,
+  enableTopLeftResponsiveStickyPinnedToBody,
+} from "./test/testEnvConfig";
+import { ExtTestGrid } from "./test/TestGrid";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  switch (window.location.pathname) {
+    case "/enableColumnAndRowSelection":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={config}
+          enableColumnAndRowSelection
+        />
+      );
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    case "/enableColumnAndRowSelectionWithSticky":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={config}
+          enableColumnAndRowSelection
+          enableSticky
+        />
+      );
+
+    case "/enableSticky":
+      return <ExtTestGrid component={ReactGrid} config={config} enableSticky />;
+
+    case "/enableHeaders":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={disabledInitialFocusLocationConfig}
+          firstRowType={"header"}
+          firstColType={"header"}
+          cellType={"header"}
+          enableColumnAndRowSelection
+        />
+      );
+
+    case "/enableFrozenFocus":
+      return (
+        <ExtTestGrid component={ReactGrid} config={config} enableFrozenFocus />
+      );
+
+    case "/enablePinnedToBody":
+      return (
+        <ExtTestGrid component={ReactGrid} config={enablePinnedToBodyConfig} />
+      );
+
+    case "/enableStickyPinnedToBody":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enablePinnedToBodyConfig}
+          enableSticky
+        />
+      );
+
+    case "/enableAdditionalContent":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={
+            window.location.search.includes("flexRow=true")
+              ? enableAdditionalContentWithFlexRowConfig
+              : enableAdditionalContentConfig
+          }
+        />
+      );
+
+    case "/enableSymetric":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableSymetric}
+          enableSticky
+        />
+      );
+
+    case "/enableResponsiveStickyTopLeft":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableTopLeftResponsiveSticky}
+          enableSticky
+        />
+      );
+
+    case "/enableResponsiveStickyBottomRight":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableBottomRightResponsiveSticky}
+          enableSticky
+        />
+      );
+
+    case "/enableResponsiveStickyPinnedToBodyTopLeft":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableTopLeftResponsiveStickyPinnedToBody}
+          enableSticky
+        />
+      );
+
+    case "/enableResponsiveStickyPinnedToBodyBottomRight":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableBottomRightResponsiveStickyPinnedToBody}
+          enableSticky
+        />
+      );
+
+    case "/enableSpannedCells":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={enableSpannedCells}
+          cellType={"header"}
+        />
+      );
+
+    case "/disableVirtualScrolling":
+      return (
+        <ExtTestGrid
+          component={ReactGrid}
+          config={disableVirtualScrolling}
+          cellType={"header"}
+        />
+      );
+
+    case "/portlogicsCustomization":
+      return (
+        <PortlogicsTestGrid
+          component={ReactGrid}
+          config={config}
+          enableColumnAndRowSelection
+          enableGroupSelection
+        />
+      );
+
+    default:
+      break;
+  }
 }
-
-export default App

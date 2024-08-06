@@ -1,0 +1,13 @@
+@import "./../styles";
+
+body {
+    background-color: #ffffff;
+    .test-grid-container {
+        $resize-line-color: gold;
+        $rg-content-text-color: #000000;
+        $cell-text-color: #000000;
+    }
+    .rg-celleditor input {
+        color: black;
+    }
+}

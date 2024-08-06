@@ -1,0 +1,1162 @@
+[
+  {
+    "MASTER_BL": "KMTCSHK8987343",
+    "HOUSE_BL": "BSCSZN241517",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071901",
+    "기존 오더번호": 17,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "SUNNY CAMELLIA",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.7",
+    "ETA": "2024.7.10",
+    "PURCHASE_ORDER_NUMBER": 2024054105,
+    "CONTAINER_NUMBER": "KMTU9306290"
+  },
+  {
+    "MASTER_BL": "KMTCSHK8975658",
+    "HOUSE_BL": "BSCSZN241518",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071902",
+    "기존 오더번호": 2024070507394601,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "STARSHIP DRACO",
+    "VOYAGE": "2408N",
+    "ETD": "2024.7.8",
+    "ETA": "2024.7.11",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051101,
+        "CONTAINER_NUMBER": "TXGU5031682"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051026,
+        "CONTAINER_NUMBER": "FFAU1091970"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "YMJAI226330753",
+    "HOUSE_BL": "BSCSZN241519",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071903",
+    "기존 오더번호": 1,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "YANGMING",
+    "VESSEL": "XUTRA BHUM",
+    "VOYAGE": "947N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064019,
+        "CONTAINER_NUMBER": "SEGU4567291"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064128,
+        "CONTAINER_NUMBER": "TEMU7712912"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "YMJAI226330752",
+    "HOUSE_BL": "BSCSZN241520",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071904",
+    "기존 오더번호": 2,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "YANGMING",
+    "VESSEL": "XUTRA BHUM",
+    "VOYAGE": "947N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064130,
+        "CONTAINER_NUMBER": "CAIU7281750"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064122,
+        "CONTAINER_NUMBER": "BSIU9933555"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "YMJAI226330858",
+    "HOUSE_BL": "BSCSZN241521",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071905",
+    "기존 오더번호": 3,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "YANGMING",
+    "VESSEL": "XUTRA BHUM",
+    "VOYAGE": "947N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064126,
+        "CONTAINER_NUMBER": "CAIU7684102"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064204,
+        "CONTAINER_NUMBER": "MAGU5556379"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064202,
+        "CONTAINER_NUMBER": "YMMU6378926"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700028",
+    "HOUSE_BL": "BSCSZN241534",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071906",
+    "기존 오더번호": 15,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS QINGDAO",
+    "VOYAGE": "1022N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054108,
+        "CONTAINER_NUMBER": "STXU4551483"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054034,
+        "CONTAINER_NUMBER": "MWLU7201230"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024044140,
+        "CONTAINER_NUMBER": "FBLU0157760"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700078",
+    "HOUSE_BL": "BSCSZN241563",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071907",
+    "기존 오더번호": 37,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS BANGKOK",
+    "VOYAGE": "1054N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024034065,
+        "CONTAINER_NUMBER": "CAIU7889524"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054035,
+        "CONTAINER_NUMBER": "POLU4504332"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700090",
+    "HOUSE_BL": "BSCSZN241573",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071908",
+    "기존 오더번호": 38,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS BANGKOK",
+    "VOYAGE": "1054N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "PURCHASE_ORDER_NUMBER": 2024064201,
+    "CONTAINER_NUMBER": "MWLU7200574"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700059",
+    "HOUSE_BL": "BSCSZN241556",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071909",
+    "기존 오더번호": 13,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS BANGKOK",
+    "VOYAGE": "1054N",
+    "ETD": "2024.7.9",
+    "ETA": "2024.7.12",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054203,
+        "CONTAINER_NUMBER": "BSIU8199370"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064002,
+        "CONTAINER_NUMBER": "STXU4551077"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064004,
+        "CONTAINER_NUMBER": "BSIU8202279"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "KMTCSHK9012106",
+    "HOUSE_BL": "BSCSZN241579",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071910",
+    "기존 오더번호": 28,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "INCHEON VOYAGER",
+    "VOYAGE": "2405N",
+    "ETD": "2024.7.10",
+    "ETA": "2024.7.13",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054103,
+        "CONTAINER_NUMBER": "BMOU6931300"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054104,
+        "CONTAINER_NUMBER": "TRHU5694557"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700104",
+    "HOUSE_BL": "BSCSZN241583",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071911",
+    "기존 오더번호": 2024071204082325,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "PURCHASE_ORDER_NUMBER": 2024054102,
+    "CONTAINER_NUMBER": "POLU4508831"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700107",
+    "HOUSE_BL": "BSCSZN241584",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071912",
+    "기존 오더번호": 39,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "PURCHASE_ORDER_NUMBER": 2024064124,
+    "CONTAINER_NUMBER": "POLU4508180"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700108",
+    "HOUSE_BL": "BSCSZN241585",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071913",
+    "기존 오더번호": 27,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "PURCHASE_ORDER_NUMBER": 2024061001,
+    "CONTAINER_NUMBER": "DFSU7725923"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700110",
+    "HOUSE_BL": "BSCSZN241586",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071914",
+    "기존 오더번호": 5,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064134,
+        "CONTAINER_NUMBER": "POLU4506633"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064132,
+        "CONTAINER_NUMBER": "BSIU8198836"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064133,
+        "CONTAINER_NUMBER": "BSIU8203700"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700111",
+    "HOUSE_BL": "BSCSZN241587",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071915",
+    "기존 오더번호": 23,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064006,
+        "CONTAINER_NUMBER": "STXU4553151"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064009,
+        "CONTAINER_NUMBER": "STXU4520230"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064007,
+        "CONTAINER_NUMBER": "BSIU9802025"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700112",
+    "HOUSE_BL": "BSCSZN241598",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071916",
+    "기존 오더번호": 22,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051027,
+        "CONTAINER_NUMBER": "STXU4559864"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051028,
+        "CONTAINER_NUMBER": "BSIU9800207"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064102,
+        "CONTAINER_NUMBER": "STXU4557943"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700115",
+    "HOUSE_BL": "BSCSZN241599",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071917",
+    "기존 오더번호": 24,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064010,
+        "CONTAINER_NUMBER": "POLU4500419"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064008,
+        "CONTAINER_NUMBER": "BSIU9800315"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051203,
+        "CONTAINER_NUMBER": "BSIU8204522"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700116",
+    "HOUSE_BL": "BSCSZN241600",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071918",
+    "기존 오더번호": 25,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS GUANGZHOU",
+    "VOYAGE": "1016N",
+    "ETD": "2024.7.11",
+    "ETA": "2024.7.15",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064001,
+        "CONTAINER_NUMBER": "STXU4564562"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064003,
+        "CONTAINER_NUMBER": "STXU4518443"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064107,
+        "CONTAINER_NUMBER": "CAIU7163819"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "KMTCSHK9013108",
+    "HOUSE_BL": "BSCSZN241580",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071919",
+    "기존 오더번호": 29,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "KMTC KEELUNG",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.12",
+    "ETA": "2024.7.16",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054233,
+        "CONTAINER_NUMBER": "FCIU7234103"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054235,
+        "CONTAINER_NUMBER": "BMOU6380640"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "KMTCSHK9017111",
+    "HOUSE_BL": "BSCSZN241581",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071920",
+    "기존 오더번호": 30,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "KMTC KEELUNG",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.12",
+    "ETA": "2024.7.16",
+    "PURCHASE_ORDER_NUMBER": 2024054237,
+    "CONTAINER_NUMBER": "DFSU7684850"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700151",
+    "HOUSE_BL": "BSCSZN241611",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071921",
+    "기존 오더번호": 104,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.19",
+    "PURCHASE_ORDER_NUMBER": 2024054236,
+    "CONTAINER_NUMBER": "CAIU7157890"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700162",
+    "HOUSE_BL": "BSCSZN241614",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071922",
+    "기존 오더번호": 31,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.19",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054310,
+        "CONTAINER_NUMBER": "FBLU0160193"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054036,
+        "CONTAINER_NUMBER": "CAIU7887732"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054234,
+        "CONTAINER_NUMBER": "STXU4542835"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700149",
+    "HOUSE_BL": "BSCSZN241608",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071923",
+    "기존 오더번호": 7,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.18",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064023,
+        "CONTAINER_NUMBER": "SEGU6731151"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064127,
+        "CONTAINER_NUMBER": "STXU4555004"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064137,
+        "CONTAINER_NUMBER": "POLU4507516"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700150",
+    "HOUSE_BL": "BSCSZN241609",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071924",
+    "기존 오더번호": 6,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.18",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064123,
+        "CONTAINER_NUMBER": "BSIU8198203"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064125,
+        "CONTAINER_NUMBER": "WFHU5194700"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700155",
+    "HOUSE_BL": "BSCSZN241610",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071925",
+    "기존 오더번호": 20,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.19",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064129,
+        "CONTAINER_NUMBER": "FBLU0158529"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064131,
+        "CONTAINER_NUMBER": "FBLU0157693"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700156",
+    "HOUSE_BL": "BSCSZN241612",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071926",
+    "기존 오더번호": 26,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.19",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051102,
+        "CONTAINER_NUMBER": "STXU4553104"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064005,
+        "CONTAINER_NUMBER": "CAIU7890567"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064105,
+        "CONTAINER_NUMBER": "DFSU7391657"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700157",
+    "HOUSE_BL": "BSCSZN241613",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071927",
+    "기존 오더번호": 34,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "PACIFIC BEIJING",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.15",
+    "ETA": "2024.7.19",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024051201,
+        "CONTAINER_NUMBER": "STXU4559838"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064101,
+        "CONTAINER_NUMBER": "POLU4505196"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064104,
+        "CONTAINER_NUMBER": "DFSU7722415"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "KMTCSHK9038967",
+    "HOUSE_BL": "BSCSZN241639",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071928",
+    "기존 오더번호": 2024071008424060,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "STAR FRONTIER",
+    "VOYAGE": "2412N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.22",
+    "PURCHASE_ORDER_NUMBER": 2024064149,
+    "CONTAINER_NUMBER": "BMOU6811537"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700197",
+    "HOUSE_BL": "BSCSZN241640",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071929",
+    "기존 오더번호": 101,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054110,
+        "CONTAINER_NUMBER": "STXU4553172"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054239,
+        "CONTAINER_NUMBER": "POLU4502263"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054238,
+        "CONTAINER_NUMBER": "CAIU7242477"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700198",
+    "HOUSE_BL": "BSCSZN241641",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071930",
+    "기존 오더번호": 2024071608531399,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "PURCHASE_ORDER_NUMBER": 2024064138,
+    "CONTAINER_NUMBER": "STXU4561075"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700199",
+    "HOUSE_BL": "BSCSZN241642",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071931",
+    "기존 오더번호": 8,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064141,
+        "CONTAINER_NUMBER": "DFSU7723290"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064141,
+        "CONTAINER_NUMBER": "DFSU7723290"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700200",
+    "HOUSE_BL": "BSCSZN241643",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071932",
+    "기존 오더번호": 11,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064304,
+        "CONTAINER_NUMBER": "SEKU5657012"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064306,
+        "CONTAINER_NUMBER": "STXU4559720"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700201",
+    "HOUSE_BL": "BSCSZN241644",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071933",
+    "기존 오더번호": 10,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064135,
+        "CONTAINER_NUMBER": "CAIU7891692"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064136,
+        "CONTAINER_NUMBER": "BSIU8199278"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064024,
+        "CONTAINER_NUMBER": "CAIU4681898"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700202",
+    "HOUSE_BL": "BSCSZN241645",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071934",
+    "기존 오더번호": 2024071001351882,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "PURCHASE_ORDER_NUMBER": 2024051202,
+    "CONTAINER_NUMBER": "STXU4524317"
+  },
+  {
+    "MASTER_BL": "POBUSHK240700203",
+    "HOUSE_BL": "BSCSZN241646",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071935",
+    "기존 오더번호": 35,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "JAN",
+    "VOYAGE": "2409N",
+    "ETD": "2024.7.17",
+    "ETA": "2024.7.20",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064103,
+        "CONTAINER_NUMBER": "STXU4563550"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064106,
+        "CONTAINER_NUMBER": "SEKU5659946"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064302,
+        "CONTAINER_NUMBER": "STXU4557687"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "KMTCSHK9035105",
+    "HOUSE_BL": "BSCSZN241669",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071936",
+    "기존 오더번호": "UC_TOPON_2024071902",
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "KMTC",
+    "VESSEL": "TS NANSHA",
+    "VOYAGE": "24007N",
+    "ETD": "2024.7.19",
+    "ETA": "2024.7.24",
+    "PURCHASE_ORDER_NUMBER": 2024054245,
+    "CONTAINER_NUMBER": "FCIU7132077"
+  },
+  {
+    "MASTER_BL": "PCSLZSNEK2400290",
+    "HOUSE_BL": "BSCSZN241670",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DIJI_2024071937",
+    "기존 오더번호": 2024071200150533,
+    "SHPR": "SHENZHEN NEW ROYAL.JE.FURNITURE CO.,LTD",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "DONGYUNG",
+    "VESSEL": "STARSHIP AQUILA",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.24",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064110,
+        "CONTAINER_NUMBER": "DYLU5144964"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064108,
+        "CONTAINER_NUMBER": "DYLU5119977"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064301,
+        "CONTAINER_NUMBER": "DYLU5144753"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "CKCOSHK0015478",
+    "HOUSE_BL": "BSCSZN241672",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071938",
+    "기존 오더번호": 2024071200400700,
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "CK LINE",
+    "VESSEL": "STARSHIP AQUILA",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.24",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064028,
+        "CONTAINER_NUMBER": "TEMU8588133"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064027,
+        "CONTAINER_NUMBER": "GAOU6011111"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064029,
+        "CONTAINER_NUMBER": "GAOU6009773"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "CKCOSHK0015453",
+    "HOUSE_BL": "BSCSZN241673",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071939",
+    "기존 오더번호": 12,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "CK LINE",
+    "VESSEL": "STARSHIP AQUILA",
+    "VOYAGE": "2413N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.24",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064140,
+        "CONTAINER_NUMBER": "GAOU6010624"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064203,
+        "CONTAINER_NUMBER": "SEKU5501924"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700277",
+    "HOUSE_BL": "BSCSZN241674",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071940",
+    "기존 오더번호": 2024071903,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS QINGDAO",
+    "VOYAGE": "1023N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.25",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064305,
+        "CONTAINER_NUMBER": "CAIU7242590"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024074013,
+        "CONTAINER_NUMBER": "BSIU9800871"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024074014,
+        "CONTAINER_NUMBER": "TXU4542711"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700272",
+    "HOUSE_BL": "BSCSZN241675",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_DEXIN_2024071941",
+    "기존 오더번호": 2024071902,
+    "SHPR": "HEROIC BRAND LIMITED",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS QINGDAO",
+    "VOYAGE": "1023N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.25",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064142,
+        "CONTAINER_NUMBER": "FBLU0158787"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064025,
+        "CONTAINER_NUMBER": "STXU4561727"
+      }
+    ]
+  },
+  {
+    "MASTER_BL": "POBUSHK240700276",
+    "HOUSE_BL": "BSCSZN241676",
+    "TRADE_DIRECTION": "수입",
+    "INCOTERMS": "FOB",
+    "신규 오더번호": "C_TOPON_2024071942",
+    "기존 오더번호": "UC_TOPON_2024071905",
+    "SHPR": "HUIZHOU YUEBANG ZHILIAN TECHNOLOGY CO.,LTD.",
+    "CARGO_TYPE": "45GP",
+    "CONTAINER_QTY": 1,
+    "POL": "CNSHU",
+    "POD": "KRICH",
+    "CARRIER": "PAN OCEAN",
+    "VESSEL": "POS QINGDAO",
+    "VOYAGE": "1023N",
+    "ETD": "2024.7.21",
+    "ETA": "2024.7.25",
+    "children": [
+      {
+        "PURCHASE_ORDER_NUMBER": 2024054246,
+        "CONTAINER_NUMBER": "CAIU7239895"
+      },
+      {
+        "PURCHASE_ORDER_NUMBER": 2024064308,
+        "CONTAINER_NUMBER": "POLU4505447"
+      }
+    ]
+  }
+]
