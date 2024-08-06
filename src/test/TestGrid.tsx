@@ -627,7 +627,7 @@ export const TestGridOptionsSelect = () => {
         defaultValue={window.location.pathname}
         onChange={(event) => navigate(event.target.value)}
       >
-        <option value="/">/</option>
+        <option value="/">포트로직스 커스텀 버전</option>
         <option value="/enableHeaders">Enable headers</option>
         <option value="/enableSticky">Enable sticky</option>
         <option value="/enableFrozenFocus">Enable frozen focus</option>
@@ -662,7 +662,6 @@ export const TestGridOptionsSelect = () => {
         <option value="/disableVirtualScrolling">
           Disable virtual scrolling
         </option>
-        <option value="/portlogicsCustomization">포트로직스 커스텀 버전</option>
       </select>
     </form>
   );

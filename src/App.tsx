@@ -146,7 +146,7 @@ export default function App() {
         />
       );
 
-    case "/portlogicsCustomization":
+    default:
       return (
         <PortlogicsTestGrid
           component={ReactGrid}
@@ -155,8 +155,5 @@ export default function App() {
           enableGroupSelection
         />
       );
-
-    default:
-      break;
   }
 }

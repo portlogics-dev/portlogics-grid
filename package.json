@@ -3,6 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "core/reactgrid.js",
+  "module": "core/reactgrid.esm.js",
+  "types": "reactgrid.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/portlogics-dev/portlogics-grid.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
