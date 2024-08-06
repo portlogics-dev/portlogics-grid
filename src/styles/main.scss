@@ -1,17 +1,19 @@
+@use 'sass:color';
+
 .rg-copy-container[contenteditable] {
     -webkit-user-select: text;
     user-select: text;
 }
 
 .reactgrid-content {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: flex-start;
+    justify-content: flex-start;
     color: $rg-content-text-color;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 
     .rg-pane {
 
@@ -41,19 +43,19 @@
         }
 
         .rg-cell {
-            font-size: $cell-font-size;
-            box-sizing: border-box;
-            white-space: nowrap;
-            position: absolute;
             display: flex;
+            position: absolute;
+            box-sizing: border-box;
             flex-direction: row;
             align-items: center;
-            overflow: hidden;
             padding: $cell-padding;
-            outline: none;
-            touch-action: auto;
+            overflow: hidden;
             border-color: $cell-border-color;
+            outline: none;
             color: $cell-text-color;
+            font-size: $cell-font-size;
+            white-space: nowrap;
+            touch-action: auto;
 
             .rg-touch-resize-handle {
                 position: absolute;
@@ -70,28 +72,28 @@
                     height: 100%;
 
                     &:hover {
-                        cursor: col-resize;
                         background-color: $resize-handle-gb-color;
+                        cursor: col-resize;
                     }
                 }
             }
 
             .rg-groupId {
-                font-size: 0.8em;
                 position: absolute;
-                right: 4px;
                 top: 4px;
+                right: 4px;
+                font-size: 0.8em;
             }
         }
 
         .rg-cell-focus,
         .rg-cell-highlight {
             position: absolute;
-            pointer-events: none;
             box-sizing: border-box;
-            border-style: solid;
             border-width: $cell-focus-border-width;
+            border-style: solid;
             border-color: $primary-color;
+            pointer-events: none;
         }
 
         .rg-touch-fill-handle {
@@ -104,25 +106,25 @@
 
             .rg-fill-handle {
                 position: absolute;
-                cursor: crosshair;
                 top: 50%;
                 left: 50%;
-                transform: translate(calc(-50% - (#{$fill-handle-border-width}/ 2)),
-                    calc(-50% - (#{$fill-handle-border-width}/ 2)));
                 width: $fill-handle-square;
                 height: $fill-handle-square;
-                background-color: $primary-color;
+                transform: translate(calc(-50% - (#{$fill-handle-border-width}/ 2)),
+                    calc(-50% - (#{$fill-handle-border-width}/ 2)));
                 border-width: $fill-handle-border-width;
                 border-style: solid;
                 border-color: $fill-handle-border-color;
                 background-clip: content-box;
+                background-color: $primary-color;
+                cursor: crosshair;
             }
         }
 
         .rg-partial-area {
             position: absolute;
-            pointer-events: none;
             box-sizing: border-box;
+            pointer-events: none;
 
             &.rg-partial-area-part {
                 border-width: $partial-area-border-width;
@@ -150,27 +152,27 @@
         position: sticky;
 
         &.shadow-top {
-            pointer-events: none; //Needed for Firefox
             top: 0;
             box-shadow: $shadow-on-bottom $cell-shadow-color;
+            pointer-events: none; //Needed for Firefox
         }
 
         &.shadow-left {
-            pointer-events: none; //Needed for Firefox
             left: 0;
             box-shadow: $shadow-on-right $cell-shadow-color;
+            pointer-events: none; //Needed for Firefox
         }
 
         &.shadow-bottom {
-            pointer-events: none; //Needed for Firefox
             bottom: 0;
             box-shadow: $shadow-on-top $cell-shadow-color;
+            pointer-events: none; //Needed for Firefox
         }
 
         &.shadow-right {
-            pointer-events: none; //Needed for Firefox
             right: 0;
             box-shadow: $shadow-on-left $cell-shadow-color;
+            pointer-events: none; //Needed for Firefox
         }
 
         &.shadow-top-left-corner {
@@ -194,37 +196,37 @@
         position: fixed;
         z-index: 1000;
         background-color: $main-bg-color;
-        font-size: $context-menu-font-size;
         box-shadow: $context-menu-shadow $cell-shadow-color;
+        font-size: $context-menu-font-size;
 
         .rg-context-menu-option {
             padding: $context-menu-option-padding;
             cursor: pointer;
 
             &:hover {
-                background-color: darken($main-bg-color, 5);
+                background-color: color.adjust($main-bg-color, $lightness: -5%);
             }
         }
     }
 
     .rg-shadow {
         position: absolute;
-        background-color: $shadow-bg;
-        opacity: $opacity-10;
         z-index: 4;
+        opacity: $opacity-10;
+        background-color: $shadow-bg;
     }
 
     .rg-column-resize-hint {
-        background-color: $resize-hint-bg-color;
         position: absolute;
         padding: 5px;
         border-radius: 0 5px 5px 0;
+        background-color: $resize-hint-bg-color;
     }
 
     .rg-line {
         position: absolute;
-        background-color: $resize-line-color;
         z-index: 4;
+        background-color: $resize-line-color;
 
         &-horizontal {
             left: 0;
@@ -238,14 +240,14 @@
     }
 
     .rg-hidden-element {
-        border: 0;
-        padding: 0;
-        margin: 0;
         position: fixed;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
         top: 50%;
         left: 50%;
+        width: 1px;
+        height: 1px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        opacity: 0;
     }
 }

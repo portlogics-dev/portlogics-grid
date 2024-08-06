@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // COLORS
 $primary-color: #3579f8 !default;
 $bg-color: #ffffff !default;
@@ -19,9 +21,9 @@ $checkbox-mark: #ffffff !default;
 $rg-content-text-color: #000000 !default;
 $cell-text-color: #000000 !default;
 
-$dropdown-focused-item-bg-color: lighten(
+$dropdown-focused-item-bg-color: color.adjust(
   $color: $primary-color,
-  $amount: 35,
+  $lightness: 35%,
 ) !default;
 $dropdown-menu-bg-color: #ffffff !default;
 
