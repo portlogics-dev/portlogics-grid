@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "./theming-test.scss";
 import { ComponentClass, useRef, useState } from "react";
 
 import portData from "./data.json";
@@ -322,15 +322,97 @@ export const TestGrid = ({
           />
         )}
       </div>
-      <TestGridOptionsSelect />
-      <button
-        onClick={() => {
-          setRender((render) => !render);
-        }}
-      >
-        Mount / Unmount
-      </button>
+      <div className="test-grid-content">
+        <TestGridOptionsSelect />
+        <button
+          onClick={() => {
+            setRender((render) => !render);
+          }}
+        >
+          Mount / Unmount
+        </button>
+        <BulletinBoard />
+      </div>
     </>
+  );
+};
+
+const BulletinBoard = () => {
+  return (
+    <div className="bulletin-board">
+      <span className="bulletin-board h2">Portlogics-grid 개발 현황</span>
+      <table className="bulletin-board-table">
+        <thead>
+          <tr>
+            <th>기능명</th>
+            <th>상태</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DisabledCellTemplate</td>
+            <td>완료</td>
+            <td>
+              같은 오더 그룹일 경우 해당 그룹 첫번째 행 제외 나머지 셀은
+              disabled
+            </td>
+          </tr>
+          <tr>
+            <td>Group Order Selection</td>
+            <td>완료</td>
+            <td>
+              disabled 셀 클릭 시에도 editable한 셀 포커스 + 그룹 오더 셀렉션
+              작동
+            </td>
+          </tr>
+          <tr>
+            <td>Cell 수정</td>
+            <td>개발 중</td>
+            <td>
+              체크포인트
+              <ul>
+                <li>
+                  같은 오더 그룹 내에서 특정 행의 수정가능한 셀 수정 시 하위
+                  disabled 셀의 내용까지 한꺼번에 수정되어야 함.
+                </li>
+                <li>우선은 TextCell만 구현.</li>
+                <li>
+                  추후 구현해야할 SearchCell/ButtonCell에서도 마찬가지로 함께
+                  수정되어야 함
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Row 추가/삭제</td>
+            <td>시작 전</td>
+            <td>
+              추가/삭제 엔트리 포인트를 어떻게 보여줄지는 논의 필요
+              <ul>
+                <li>우클릭 컨텍스트 버튼에서 하도록?</li>
+                <li>
+                  그리드 바깥에 버튼을 빼놓는건 추가버튼의 경우 시인성이 좋지
+                </li>
+                <li>
+                  못한듯 삭제버튼은 PMS처럼 체크박스-그룹 삭제로 해도 좋을 듯
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Columns Reordering</td>
+            <td>시작 전</td>
+            <td>특정 CellType 내에서만 reordering 가능케 해야할 듯</td>
+          </tr>
+          <tr>
+            <td>Context Menu(우클릭 메뉴)</td>
+            <td>시작 전</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 

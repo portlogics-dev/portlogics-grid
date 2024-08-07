@@ -10,4 +10,61 @@ body {
     .rg-celleditor input {
         color: black;
     }
+    .test-grid-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        margin-block: 1rem;
+        gap: 4px;
+    }
+    .bulletin-board {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-block: 1rem;
+        gap: 20px;
+
+        .h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+    }
+    .bulletin-board-table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+        border: 0 solid hsl(240 5.9% 90%);
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: hsl(240 4.8% 95.9% / .5);
+            font-weight: bold;
+        }
+
+        tr {
+            transition-duration: .15s;
+            transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        }
+        tr:hover {
+            background-color: hsl(240 4.8% 95.9% / .5);
+        }
+
+        td ul {
+            margin: 8px 18px;
+            padding: 0;
+
+            li {
+                margin-block: 4px;
+            }
+        }
+    }
 }
