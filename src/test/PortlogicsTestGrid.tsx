@@ -405,6 +405,11 @@ const BulletinBoard = () => {
             <td>시작 전</td>
             <td>특정 CellType 내에서만 reordering 가능케 해야할 듯</td>
           </tr>
+          <tr>
+            <td>Context Menu(우클릭 메뉴)</td>
+            <td>시작 전</td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </div>
