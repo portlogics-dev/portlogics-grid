@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "outDir": "./dist",
+    "jsx": "react",
+    "module": "ESNext",
+    "removeComments": false,
+    "isolatedModules": false,
+  }
+}
