@@ -1,6 +1,6 @@
 {
-  "name": "portlogics-grid",
-  "description": "A React grid compatible with tree-structured data",
+  "name": "@portlogics/reactgrid",
+  "description": "@silevis/reactgrid library enhanced with additional tree-structure-view features",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "pre-deploy": "npx rollup -c",
-    "deploy": "npm publish dist --access=public",
+    "deploy": "npm publish ./dist --access=public",
     "lint": "eslint . --max-warnings 0",
     "prepare": "husky",
     "remove-suffix": "cross-env SUFFIX=rc node ./node_modules/npm-version-suffix/run-remove-suffix.js"
