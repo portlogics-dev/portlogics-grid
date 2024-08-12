@@ -1,45 +1,24 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2021: true },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', '*.json','rollup.config.js'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', "import", "@typescript-eslint", "prettier"],
-  settings: {
-    "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
+  plugins: ['react', "import", "@typescript-eslint", "prettier"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
     },
-    "import/resolver": {
-      typescript: {
-        project: ["apps/*/tsconfig.json", "packages/*/tsconfig.json"],
-      },
-    },
-    react: {
-      version: "detect",
-    },
+    ecmaVersion: 12,
+    sourceType: "module",
   },
   rules: {
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error",
-      {
-        args: "all",
-        argsIgnorePattern: "^_",
-        caughtErrors: "all",
-        caughtErrorsIgnorePattern: "^_",
-        destructuredArrayIgnorePattern: "^_",
-        varsIgnorePattern: "^_",
-        ignoreRestSiblings: true,
-      },
-    ],
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
     // import
     "import/order": [
       "error",
