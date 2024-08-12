@@ -5,7 +5,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', '*.json','rollup.config.js'],
+  ignorePatterns: ['node_modules/', 'dist/', 'build/', '.eslintrc.cjs', '*.json', '*.config.js'],
   parser: '@typescript-eslint/parser',
   plugins: ['react', "import", "@typescript-eslint", "prettier"],
   parserOptions: {

@@ -7,5 +7,6 @@
     "module": "ESNext",
     "removeComments": false,
     "isolatedModules": false,
+    "noEmit": false
   }
 }
