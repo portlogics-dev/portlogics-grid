@@ -61,8 +61,8 @@ export class RowSelectionBehavior extends Behavior {
   }
 
   handlePointerUp(
-    _event: MouseEvent | PointerEvent,
-    _location: PointerLocation,
+    event: MouseEvent | PointerEvent,
+    location: PointerLocation,
     state: State<CellMatrix, Behavior<MouseEvent | PointerEvent>>,
   ): State<CellMatrix, Behavior<MouseEvent | PointerEvent>> {
     if (

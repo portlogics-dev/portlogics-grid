@@ -1,5 +1,5 @@
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCharFromKey } from "./getCharFromKeyCode";
 import {
@@ -43,10 +43,10 @@ export class DateCellTemplate implements CellTemplate<DateCell> {
     cell: Compatible<DateCell>,
     keyCode: number,
     ctrl: boolean,
-    _shift: boolean,
-    _alt: boolean,
+    shift: boolean,
+    alt: boolean,
     key: string,
-    _capsLock: boolean,
+    capsLock: boolean,
   ): { cell: Compatible<DateCell>; enableEditMode: boolean } {
     if (!ctrl && isCharAlphaNumeric(getCharFromKey(key)))
       return {
@@ -78,7 +78,7 @@ export class DateCellTemplate implements CellTemplate<DateCell> {
     cell: Compatible<DateCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<DateCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     if (!isInEditMode) {
       return cell.text;
     }

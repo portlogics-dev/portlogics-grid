@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, useCallback, useRef } from "react";
+import * as React from "react";
 
 import { ResizeHandle } from "./ResizeHandle";
 import { areLocationsEqual } from "../Functions/areLocationsEqual";
@@ -18,7 +18,7 @@ export interface CellRendererProps {
   range: Range;
   update: State["update"];
   currentlyEditedCell: State["currentlyEditedCell"];
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
 export interface CellRendererChildProps<TState extends State = State> {
@@ -58,14 +58,14 @@ function getBorderProperties(
   };
 }
 
-export const CellRenderer = ({
+export const CellRenderer: React.FC<CellRendererProps> = ({
   state,
   location,
   range,
   borders,
   update,
   currentlyEditedCell,
-}: CellRendererProps) => {
+}) => {
   const { cell, cellTemplate } = getCompatibleCellAndTemplate(state, location);
   const isFocused =
     state.focusedLocation !== undefined &&
@@ -73,7 +73,7 @@ export const CellRenderer = ({
   const customClass =
     (cellTemplate.getClassName && cellTemplate.getClassName(cell, false)) ?? "";
 
-  const currentlyEditedCellRef = useRef(currentlyEditedCell); //
+  const currentlyEditedCellRef = React.useRef(currentlyEditedCell); //
 
   const storePropertyAndDefaultValue = storeBorderAndCell(borders, cell);
   const bordersWidth = getBorderProperties(
@@ -117,7 +117,7 @@ export const CellRenderer = ({
     ...((isFocused ||
       cell.type === "header" ||
       isFirstRowOrColumnWithSelection) && { touchAction: "none" }), // prevent scrolling
-  } as CSSProperties;
+  } as React.CSSProperties;
 
   const isInEditMode = isFocused && !!currentlyEditedCellRef.current;
 
@@ -133,7 +133,7 @@ export const CellRenderer = ({
       ? currentlyEditedCellRef.current
       : cell; // location 기반 cell을 렌더할지, currentlyEdited인 cell의 current를 렌더할지 선택
 
-  const onCellChanged = useCallback(
+  const onCellChanged = React.useCallback(
     (cell: Compatible<Cell>, commit: boolean) => {
       if (isInEditMode) {
         currentlyEditedCellRef.current = commit ? undefined : cell;
@@ -151,7 +151,7 @@ export const CellRenderer = ({
     <div
       className={classNames}
       style={style}
-      {...(process.env.NODE_ENV === "development" && {
+      {...(process.env.MODE === "development" && {
         "data-cell-colidx": location.column.idx,
         "data-cell-rowidx": location.row.idx,
       })}

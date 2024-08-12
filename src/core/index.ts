@@ -8,7 +8,6 @@ export * from "./../lib/Model/CellMatrixBuilder";
 export * from "./../lib/Model/EventHandlers";
 
 export * from "../lib/Components/CellEditor";
-export * from "../lib/Components/CellEditor/utils";
 export * from "./../lib/Components/GridRenderer";
 export * from "./../lib/Components/LegacyBrowserGridRenderer";
 export * from "./../lib/Components/CellRenderer";

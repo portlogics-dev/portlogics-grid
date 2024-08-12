@@ -16,7 +16,7 @@ export class ColumnReorderBehavior extends Behavior {
   autoScrollDirection: Direction = "horizontal";
 
   handlePointerDown(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {
@@ -42,7 +42,7 @@ export class ColumnReorderBehavior extends Behavior {
   }
 
   handlePointerMove(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {
@@ -64,7 +64,7 @@ export class ColumnReorderBehavior extends Behavior {
   }
 
   handlePointerEnter(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {
@@ -113,7 +113,7 @@ export class ColumnReorderBehavior extends Behavior {
   }
 
   handlePointerUp(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {

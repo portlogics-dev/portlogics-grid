@@ -1,8 +1,10 @@
+import * as React from "react";
+
 import { PaneContentChild } from "../Model/InternalModel";
 
-export const FillHandleRangeSelection = ({
+export const FillHandleRangeSelection: React.FC<PaneContentChild> = ({
   state,
   calculatedRange,
-}: PaneContentChild) => {
+}) => {
   return <>{state.currentBehavior.renderPanePart(state, calculatedRange)}</>;
 };

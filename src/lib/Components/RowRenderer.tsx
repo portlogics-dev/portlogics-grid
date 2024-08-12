@@ -1,4 +1,4 @@
-import { memo, NamedExoticComponent } from "react";
+import * as React from "react";
 
 import { CellRendererProps } from "./CellRenderer";
 import { translateLocationIdxToLookupKey } from "../Model/CellMatrix";
@@ -31,13 +31,13 @@ function shouldMemoRowRenderer(
   );
 }
 
-const MappedColumns = ({
+const MappedColumns: React.FC<RowRendererProps> = ({
   columns,
   row,
   cellRenderer,
   borders,
   state,
-}: RowRendererProps) => {
+}) => {
   const lastColIdx = columns[columns.length - 1].idx;
   const CellRenderer = cellRenderer;
   return (
@@ -76,9 +76,7 @@ const MappedColumns = ({
   );
 };
 
-export const RowRenderer: NamedExoticComponent<RowRendererProps> = memo(
-  MappedColumns,
-  shouldMemoRowRenderer,
-);
+export const RowRenderer: React.NamedExoticComponent<RowRendererProps> =
+  React.memo(MappedColumns, shouldMemoRowRenderer);
 
 RowRenderer.displayName = "RowRenderer";

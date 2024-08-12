@@ -1,4 +1,4 @@
-import { ComponentClass, useRef, useState } from "react";
+import * as React from "react";
 
 import {
   Column,
@@ -36,7 +36,7 @@ interface TestGridProps {
   firstColType?: ChevronCell["type"] | HeaderCell["type"]; // 'chevron' if undefined
   cellType?: TextCell["type"] | HeaderCell["type"]; // 'text' if undefined
   config: TestConfig;
-  component: ComponentClass<ReactGridProps>;
+  component: React.ComponentClass<ReactGridProps>;
 }
 
 const numberValidator: NumberCell["validator"] = (number: number) => {
@@ -90,11 +90,11 @@ export const TestGrid = ({
   firstColType = "chevron",
   cellType = "text",
 }: TestGridProps) => {
-  const reactGridRef = useRef<ReactGridInstance>(null);
+  const reactGridRef = React.useRef<ReactGridInstance>(null);
 
-  const [render, setRender] = useState(true);
+  const [render, setRender] = React.useState(true);
 
-  const [columns, setColumns] = useState(() =>
+  const [columns, setColumns] = React.useState(() =>
     new Array(config.columns)
       .fill({ columnId: 0, resizable: true, reorderable: true, width: -1 })
       .map<Column>((_, ci) => ({
@@ -105,7 +105,7 @@ export const TestGrid = ({
       })),
   );
 
-  const [rows, setRows] = useState(() =>
+  const [rows, setRows] = React.useState(() =>
     new Array(config.rows).fill(0).map<TestGridRow>((_, ri) => ({
       rowId: `row-${ri}`,
       reorderable: true,
@@ -427,7 +427,9 @@ export const TestGrid = ({
         {
           id: "rowOption",
           label: "Custom menu row option",
-          handler: () => {},
+          handler: () => {
+            return;
+          },
         },
       ];
     }
@@ -437,7 +439,9 @@ export const TestGrid = ({
         {
           id: "columnOption",
           label: "Custom menu column option",
-          handler: () => {},
+          handler: () => {
+            return;
+          },
         },
       ];
     }
@@ -446,17 +450,23 @@ export const TestGrid = ({
       {
         id: "all",
         label: "Custom menu option",
-        handler: () => {},
+        handler: () => {
+          return;
+        },
       },
     ];
   };
 
-  const handleFocusLocationChanged = (_location: CellLocation): void => {};
+  const handleFocusLocationChanged = (_location: CellLocation): void => {
+    return;
+  };
 
   const handleFocusLocationChanging = (_location: CellLocation): boolean =>
     true;
 
-  const handleSelectionChanged = (_range: Range[]): void => {};
+  const handleSelectionChanged = (_range: Range[]): void => {
+    return;
+  };
 
   const BANNED_LOCATION = { rowIdx: 5, colIdx: 10 };
 

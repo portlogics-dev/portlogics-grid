@@ -1,5 +1,5 @@
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCharFromKey } from "./getCharFromKeyCode";
 import {
@@ -58,10 +58,10 @@ export class NumberCellTemplate implements CellTemplate<NumberCell> {
     cell: Compatible<NumberCell>,
     keyCode: number,
     ctrl: boolean,
-    _shift: boolean,
-    _alt: boolean,
+    shift: boolean,
+    alt: boolean,
     key: string,
-    _capsLock: boolean,
+    capsLock: boolean,
   ): { cell: Compatible<NumberCell>; enableEditMode: boolean } {
     if (isNumpadNumericKey(keyCode)) keyCode -= 48;
     const char = getCharFromKey(key);
@@ -118,7 +118,7 @@ export class NumberCellTemplate implements CellTemplate<NumberCell> {
     cell: Compatible<NumberCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<NumberCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     if (!isInEditMode) {
       const isValid = cell.validator?.(cell.value) ?? true;
       const textToDisplay =

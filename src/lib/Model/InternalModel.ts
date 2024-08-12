@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react";
-
 import { EventHandlers } from "./EventHandlers";
 import { Column, Row } from "./PublicModel";
 import { Range } from "./Range";
@@ -54,7 +52,7 @@ export interface PointerLocation extends Location {
   readonly cellY: number;
 }
 
-export interface GridRendererProps extends PropsWithChildren {
+export interface GridRendererProps {
   eventHandlers: EventHandlers;
 }
 

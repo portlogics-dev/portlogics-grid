@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
 import { getCharFromKey } from "./getCharFromKeyCode";
@@ -49,8 +49,8 @@ export class TimeCellTemplate implements CellTemplate<TimeCell> {
     cell: Compatible<TimeCell>,
     keyCode: number,
     ctrl: boolean,
-    _shift: boolean,
-    _alt: boolean,
+    shift: boolean,
+    alt: boolean,
     key: string,
   ): { cell: Compatible<TimeCell>; enableEditMode: boolean } {
     if (!ctrl && isCharAllowedOnNumberInput(getCharFromKey(key)))
@@ -78,7 +78,7 @@ export class TimeCellTemplate implements CellTemplate<TimeCell> {
     });
   }
 
-  getClassName(cell: Compatible<TimeCell>, _isInEditMode: boolean): string {
+  getClassName(cell: Compatible<TimeCell>, isInEditMode: boolean): string {
     return cell.className ? cell.className : "";
   }
 
@@ -86,7 +86,7 @@ export class TimeCellTemplate implements CellTemplate<TimeCell> {
     cell: Compatible<TimeCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<TimeCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     if (!isInEditMode) {
       return cell.text;
     }

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
 import { getCharFromKey } from "./getCharFromKeyCode";
@@ -18,7 +18,7 @@ export interface TextCell extends Cell {
   text: string;
   placeholder?: string;
   validator?: (text: string) => boolean;
-  renderer?: (text: string) => ReactNode;
+  renderer?: (text: string) => React.ReactNode;
   errorMessage?: string;
 }
 
@@ -84,7 +84,7 @@ export class TextCellTemplate implements CellTemplate<TextCell> {
     return { cell: { ...cell, text: eventData }, enableEditMode: true };
   }
 
-  getClassName(cell: Compatible<TextCell>, _isInEditMode: boolean): string {
+  getClassName(cell: Compatible<TextCell>, isInEditMode: boolean): string {
     const isValid = cell.validator ? cell.validator(cell.text) : true;
     const className = cell.className ? cell.className : "";
     return `${isValid ? "valid" : "rg-invalid"} ${
@@ -96,7 +96,7 @@ export class TextCellTemplate implements CellTemplate<TextCell> {
     cell: Compatible<TextCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<TextCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     if (!isInEditMode) {
       const isValid = cell.validator ? cell.validator(cell.text) : true;
       const cellText = cell.text || cell.placeholder || "";

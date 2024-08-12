@@ -1,5 +1,5 @@
 import "./theming-test.scss";
-import { ComponentClass, useRef, useState } from "react";
+import * as React from "react";
 
 import portData from "./data.json";
 import { flattenData } from "./flattenData";
@@ -34,7 +34,7 @@ export interface TestGridProps {
   firstColType?: ChevronCell["type"] | HeaderCell["type"]; // 'chevron' if undefined
   cellType?: TextCell["type"] | HeaderCell["type"]; // 'text' if undefined
   config: TestConfig;
-  component: ComponentClass<ReactGridProps>;
+  component: React.ComponentClass<ReactGridProps>;
 }
 
 export const TestGrid = ({
@@ -45,15 +45,15 @@ export const TestGrid = ({
   enableGroupSelection,
   enableFrozenFocus,
 }: TestGridProps) => {
-  const reactGridRef = useRef<ReactGridInstance>(null);
+  const reactGridRef = React.useRef<ReactGridInstance>(null);
 
-  const [render, setRender] = useState(true);
+  const [render, setRender] = React.useState(true);
 
   const { rows: portRows, columns: portColumns } = flattenData(portData);
 
-  const [columns, setColumns] = useState(portColumns);
+  const [columns, setColumns] = React.useState(portColumns);
 
-  const [rows, setRows] = useState(portRows);
+  const [rows, setRows] = React.useState(portRows);
 
   const handleColumnResize = (
     columnId: Id,
@@ -191,7 +191,9 @@ export const TestGrid = ({
             _selectedRowIds: Id[],
             _selectedColIds: Id[],
             _selectionMode: SelectionMode,
-          ) => {},
+          ) => {
+            return;
+          },
         },
       ];
     }
@@ -205,7 +207,9 @@ export const TestGrid = ({
             _selectedRowIds: Id[],
             _selectedColIds: Id[],
             _selectionMode: SelectionMode,
-          ) => {},
+          ) => {
+            return;
+          },
         },
       ];
     }
@@ -218,17 +222,23 @@ export const TestGrid = ({
           _selectedRowIds: Id[],
           _selectedColIds: Id[],
           _selectionMode: SelectionMode,
-        ) => {},
+        ) => {
+          return;
+        },
       },
     ];
   };
 
-  const handleFocusLocationChanged = (_location: CellLocation): void => {};
+  const handleFocusLocationChanged = (_location: CellLocation): void => {
+    return;
+  };
 
   const handleFocusLocationChanging = (_location: CellLocation): boolean =>
     true;
 
-  const handleSelectionChanged = (_range: Range[]): void => {};
+  const handleSelectionChanged = (_range: Range[]): void => {
+    return;
+  };
 
   const BANNED_LOCATION = { rowIdx: 5, colIdx: 10 };
 

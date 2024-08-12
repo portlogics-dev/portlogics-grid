@@ -54,8 +54,8 @@ export class ColumnSelectionBehavior extends Behavior {
   }
 
   handlePointerUp(
-    _event: MouseEvent | PointerEvent,
-    _location: Location,
+    event: MouseEvent | PointerEvent,
+    location: Location,
     state: State,
   ): State {
     if (

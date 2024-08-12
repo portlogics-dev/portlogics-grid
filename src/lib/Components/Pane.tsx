@@ -1,10 +1,4 @@
-import {
-  CSSProperties,
-  memo,
-  NamedExoticComponent,
-  PropsWithChildren,
-  ReactNode,
-} from "react";
+import * as React from "react";
 
 import { CellFocus, CellHighlight } from "./CellFocus";
 import { CellRendererProps } from "./CellRenderer";
@@ -19,9 +13,9 @@ import { Highlight } from "../Model/PublicModel";
 import { Range } from "../Model/Range";
 import { State } from "../Model/State";
 
-export interface PaneProps extends PropsWithChildren {
+export interface PaneProps {
   renderChildren: boolean;
-  style: CSSProperties;
+  style: React.CSSProperties;
   className: string;
 }
 
@@ -37,7 +31,7 @@ export interface PaneContentProps<TState extends State = State> {
   range: () => Range;
   borders: Borders;
   cellRenderer: React.FC<CellRendererProps>;
-  children?: (state: TState, range: Range) => ReactNode;
+  children?: (state: TState, range: Range) => React.ReactNode;
 }
 
 function shouldMemoPaneGridContent(
@@ -67,31 +61,32 @@ function shouldMemoPaneGridContent(
   );
 }
 
-export const PaneGridContent: NamedExoticComponent<RowsProps> = memo(
-  // row별로 메모이제이션해서 관리
-  ({ range, state, borders, cellRenderer }) => (
-    <>
-      {range.rows.map((row) => (
-        <RowRenderer
-          key={row.rowId}
-          state={state}
-          row={row}
-          columns={range.columns}
-          forceUpdate={true}
-          cellRenderer={cellRenderer}
-          borders={{
-            ...borders,
-            top: borders.top && row.top === 0,
-            bottom:
-              (borders.bottom && row.idx === range.last.row.idx) ||
-              !(state.cellMatrix.scrollableRange.last.row?.idx === row.idx),
-          }}
-        />
-      ))}
-    </>
-  ),
-  shouldMemoPaneGridContent,
-);
+export const PaneGridContent: React.NamedExoticComponent<RowsProps> =
+  React.memo(
+    // row별로 메모이제이션해서 관리
+    ({ range, state, borders, cellRenderer }) => (
+      <>
+        {range.rows.map((row) => (
+          <RowRenderer
+            key={row.rowId}
+            state={state}
+            row={row}
+            columns={range.columns}
+            forceUpdate={true}
+            cellRenderer={cellRenderer}
+            borders={{
+              ...borders,
+              top: borders.top && row.top === 0,
+              bottom:
+                (borders.bottom && row.idx === range.last.row.idx) ||
+                !(state.cellMatrix.scrollableRange.last.row?.idx === row.idx),
+            }}
+          />
+        ))}
+      </>
+    ),
+    shouldMemoPaneGridContent,
+  );
 
 PaneGridContent.displayName = "PaneGridContent";
 
@@ -123,12 +118,12 @@ function renderHighlights(state: State, range: Range) {
   });
 }
 
-export const Pane = ({
+export const Pane: React.FC<PaneProps> = ({
   className,
   style,
   renderChildren,
   children,
-}: PaneProps) => {
+}) => {
   if (!style.width || !style.height) {
     return null;
   } else {
@@ -174,15 +169,10 @@ export const PaneContent = ({
   );
 };
 
-const PaneContentWrapper = ({
-  className,
-  style,
-  children,
-}: {
+const PaneContentWrapper: React.FC<{
   className: string;
-  style: CSSProperties;
-  children: ReactNode;
-}) => {
+  style: React.CSSProperties;
+}> = ({ className, style, children }) => {
   return (
     <div className={`rg-pane ${className}`} style={style}>
       {children}

@@ -23,7 +23,7 @@ export interface PanesProps {
   cellRenderer: React.FC<CellRendererProps>;
 }
 
-export const PanesRenderer = ({ cellRenderer }: PanesProps) => {
+export const PanesRenderer: React.FC<PanesProps> = ({ cellRenderer }) => {
   const state = useReactGridState();
 
   const cellMatrix = state.cellMatrix;

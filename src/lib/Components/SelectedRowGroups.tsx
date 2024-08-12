@@ -1,12 +1,14 @@
+import * as React from "react";
+
 import { PartialArea } from "./PartialArea";
 import { PaneContentChild, Range } from "../../core";
 import { isRangeIntersects } from "../Functions/isRangeIntersectsWith";
 
 // rowGroups에만 반응하는 함수
-export const SelectedRowGroups = ({
+export const SelectedRowGroups: React.FC<PaneContentChild> = ({
   state,
   calculatedRange,
-}: PaneContentChild) => {
+}) => {
   // calculatedRange = 지금 관측 가능한 테이블 영역
   return (
     <>

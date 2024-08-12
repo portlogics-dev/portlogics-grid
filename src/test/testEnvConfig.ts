@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 import { CellLocation, Highlight, TextLabels } from "../core";
 
 /**
@@ -238,5 +236,5 @@ export interface TestConfig {
   verticalStickyBreakpoint?: number;
 
   fillViewport?: boolean;
-  withDivComponentStyles: CSSProperties;
+  withDivComponentStyles: React.CSSProperties;
 }
