@@ -1,3 +1,5 @@
+import * as React from "react";
+
 interface HintProps {
   linePosition: number;
   left: number;
@@ -5,7 +7,11 @@ interface HintProps {
 }
 
 // TODO these component props should be calculated directly by behaviour (only integers)
-export const ResizeHint = ({ left, linePosition, offset }: HintProps) => {
+export const ResizeHint: React.FC<HintProps> = ({
+  left,
+  linePosition,
+  offset,
+}) => {
   return (
     <>
       {linePosition !== -1 && (

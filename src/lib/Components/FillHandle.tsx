@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect, useState } from "react";
 
 import { Location } from "../../core";
 import { FillHandleBehavior } from "../Behaviors/FillHandleBehavior";
@@ -9,7 +9,7 @@ interface FillHandleProps {
   location: Location;
 }
 
-export const FillHandle = ({ state, location }: FillHandleProps) => {
+export const FillHandle: React.FC<FillHandleProps> = ({ state, location }) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 

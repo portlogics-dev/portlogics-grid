@@ -1,6 +1,5 @@
-/* eslint-disable react-refresh/only-export-components */
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import * as React from "react";
 import Select, {
   OptionProps,
   MenuProps,
@@ -169,9 +168,9 @@ export class DropdownCellTemplate implements CellTemplate<DropdownCell> {
 
   render(
     cell: Compatible<DropdownCell>,
-    _isInEditMode: boolean,
+    isInEditMode: boolean,
     onCellChanged: (cell: Compatible<DropdownCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     return (
       <DropdownInput
         onCellChanged={(cell) =>
@@ -189,17 +188,17 @@ interface DIProps {
 }
 
 const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
-  const selectRef = useRef<any>(null);
+  const selectRef = React.useRef<any>(null);
 
-  const [inputValue, setInputValue] = useState<string | undefined>(
+  const [inputValue, setInputValue] = React.useState<string | undefined>(
     cell.inputValue,
   );
-  const selectedValue = useMemo<OptionType | undefined>(
+  const selectedValue = React.useMemo<OptionType | undefined>(
     () => cell.values.find((val: any) => val.value === cell.text),
     [cell.text, cell.values],
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (cell.isOpen && selectRef.current) {
       selectRef.current.focus();
       setInputValue(cell.inputValue);
@@ -310,13 +309,13 @@ const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
   );
 };
 
-const CustomOption = ({
+const CustomOption: React.FC<OptionProps<OptionType, false>> = ({
   innerProps,
   label,
   isSelected,
   isFocused,
   isDisabled,
-}: OptionProps<OptionType, false>) => (
+}) => (
   <div
     {...innerProps}
     onPointerDown={(e) => e.stopPropagation()}
@@ -328,7 +327,10 @@ const CustomOption = ({
   </div>
 );
 
-const CustomMenu = ({ innerProps, children }: MenuProps<OptionType, false>) => (
+const CustomMenu: React.FC<MenuProps<OptionType, false>> = ({
+  innerProps,
+  children,
+}) => (
   <div
     {...innerProps}
     className="rg-dropdown-menu"

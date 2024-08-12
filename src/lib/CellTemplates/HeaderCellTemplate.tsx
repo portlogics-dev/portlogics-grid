@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
 import { getCellProperty } from "../Functions/getCellProperty";
@@ -27,19 +27,19 @@ export class HeaderCellTemplate implements CellTemplate<HeaderCell> {
 
   render(
     cell: Compatible<HeaderCell>,
-    _isInEditMode: boolean,
-    _onCellChanged: (cell: Compatible<HeaderCell>, commit: boolean) => void,
-  ): ReactNode {
+    isInEditMode: boolean,
+    onCellChanged: (cell: Compatible<HeaderCell>, commit: boolean) => void,
+  ): React.ReactNode {
     return cell.text;
   }
 
-  isFocusable = (_cell: Compatible<HeaderCell>): boolean => false;
+  isFocusable = (cell: Compatible<HeaderCell>): boolean => false;
 
-  getClassName(cell: Compatible<HeaderCell>, _isInEditMode: boolean): string {
+  getClassName(cell: Compatible<HeaderCell>, isInEditMode: boolean): string {
     return cell.className ? cell.className : "";
   }
 
-  getStyle = (_cell: Compatible<HeaderCell>): CellStyle => ({
+  getStyle = (cell: Compatible<HeaderCell>): CellStyle => ({
     background: "rgba(128, 128, 128, 0.1)",
   });
 }

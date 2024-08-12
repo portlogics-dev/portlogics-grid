@@ -21,7 +21,7 @@ export class RowReorderBehavior extends Behavior {
   autoScrollDirection: Direction = "vertical";
 
   handlePointerDown(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {
@@ -43,7 +43,7 @@ export class RowReorderBehavior extends Behavior {
   }
 
   handlePointerMove(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {
@@ -159,7 +159,7 @@ export class RowReorderBehavior extends Behavior {
   }
 
   handlePointerUp(
-    _event: PointerEvent,
+    event: PointerEvent,
     location: PointerLocation,
     state: State,
   ): State {

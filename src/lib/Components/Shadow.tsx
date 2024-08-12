@@ -1,6 +1,8 @@
+import React from "react";
+
 import { useReactGridState } from "./StateProvider";
 
-export const Shadow = () => {
+export const Shadow: React.FC = () => {
   const {
     lineOrientation,
     shadowSize,

@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { translateLocationIdxToLookupKey } from "../Model/CellMatrix";
 import { Location } from "../Model/InternalModel";
 import { State } from "../Model/State";
@@ -9,12 +11,12 @@ interface FeaturedCellProps {
   className?: string;
 }
 
-export const CellHighlight = ({
+export const CellHighlight: React.FC<FeaturedCellProps> = ({
   borderColor,
   location,
   className,
   state,
-}: FeaturedCellProps) => {
+}) => {
   const { idx: colIdx } = location.column;
   const { idx: rowIdx } = location.row;
   const range =
@@ -35,11 +37,11 @@ export const CellHighlight = ({
   );
 };
 
-export const CellFocus = ({
+export const CellFocus: React.FC<FeaturedCellProps> = ({
   borderColor,
   location,
   className,
-}: FeaturedCellProps) => {
+}) => {
   return (
     <FeaturedCell
       location={location}
@@ -51,13 +53,9 @@ export const CellFocus = ({
   );
 };
 
-const FeaturedCell = ({
-  className,
-  location,
-  borderColor,
-  height,
-  width,
-}: FeaturedCellProps & { width: number; height: number }) => {
+const FeaturedCell: React.FC<
+  FeaturedCellProps & { width: number; height: number }
+> = ({ className, location, borderColor, height, width }) => {
   return (
     <div
       className={className}

@@ -1,5 +1,5 @@
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCharFromKey } from "./getCharFromKeyCode";
 import { isNavigationKey, isAlphaNumericKey } from "./keyCodeCheckings";
@@ -125,7 +125,7 @@ export class ChevronCellTemplate implements CellTemplate<ChevronCell> {
     cell: Compatible<ChevronCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<ChevronCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     return !isInEditMode ? (
       <>
         {cell.hasChildren ? (

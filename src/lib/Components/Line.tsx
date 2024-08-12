@@ -1,6 +1,8 @@
+import * as React from "react";
+
 import { useReactGridState } from "./StateProvider";
 
-export const Line = () => {
+export const Line: React.FC = () => {
   const { linePosition, lineOrientation, cellMatrix } = useReactGridState();
 
   const isVertical = lineOrientation === "vertical";

@@ -1,11 +1,13 @@
+import * as React from "react";
+
 import { useReactGridState } from "./StateProvider";
 interface HiddenElementProps {
   hiddenElementRefHandler: (hiddenFocusElement: HTMLInputElement) => void;
 }
 
-export const HiddenElement = ({
+export const HiddenElement: React.FC<HiddenElementProps> = ({
   hiddenElementRefHandler,
-}: HiddenElementProps) => {
+}) => {
   const { hiddenFocusElement } = useReactGridState();
   return (
     <input

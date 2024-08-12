@@ -1,4 +1,4 @@
-import { Component, ReactNode } from "react";
+import * as React from "react";
 
 import { ContextMenu } from "./ContextMenu";
 import { Line } from "./Line";
@@ -21,7 +21,7 @@ import { EventHandlers } from "../Model/EventHandlers";
 import { PointerEventsController } from "../Model/PointerEventsController";
 import { defaultStateFields, State } from "../Model/State";
 
-export class ReactGrid extends Component<ReactGridProps, State> {
+export class ReactGrid extends React.Component<ReactGridProps, State> {
   private updateState = (state: State) => this.setState(state);
   private stateUpdater = (modifier: StateModifier) =>
     handleStateUpdate(
@@ -111,7 +111,7 @@ export class ReactGrid extends Component<ReactGridProps, State> {
     });
   }
 
-  render(): ReactNode {
+  render(): React.ReactNode {
     const { state, eventHandlers } = this;
 
     if (state.legacyBrowserMode) {

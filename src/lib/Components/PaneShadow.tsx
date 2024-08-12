@@ -1,21 +1,21 @@
-import { PropsWithChildren } from "react";
+import * as React from "react";
 
 import { isBrowserFirefox } from "../Functions/firefox";
 
-interface PaneShadowProps extends PropsWithChildren {
+interface PaneShadowProps {
   renderCondition: boolean;
   className: string;
   style: React.CSSProperties;
   zIndex?: number;
 }
 
-export const PaneShadow = ({
+export const PaneShadow: React.FC<PaneShadowProps> = ({
   renderCondition,
   className,
   style,
   zIndex,
   children,
-}: PaneShadowProps) => {
+}) => {
   if (renderCondition) {
     return (
       <div

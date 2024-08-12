@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCellProperty } from "../Functions/getCellProperty";
 import {
@@ -33,10 +33,10 @@ export class DisabledCellTemplate implements CellTemplate<DisabledCell> {
 
   handleKeyDown(
     cell: Compatible<DisabledCell>,
-    _keyCode: number,
-    _ctrl: boolean,
-    _shift: boolean,
-    _alt: boolean,
+    keyCode: number,
+    ctrl: boolean,
+    shift: boolean,
+    alt: boolean,
   ): {
     cell: Compatible<DisabledCell>;
     enableEditMode: boolean;
@@ -44,7 +44,7 @@ export class DisabledCellTemplate implements CellTemplate<DisabledCell> {
     return { cell, enableEditMode: false };
   }
 
-  isFocusable = (_cell: Compatible<DisabledCell>): boolean => false;
+  isFocusable = (cell: Compatible<DisabledCell>): boolean => false;
 
   // 같은 그룹 내 수정가능한 행의 셀을 수정했을 때 비활성화된 셀들도 수정돼야 하므로 update함수는 있어야 함.
   update(
@@ -56,9 +56,9 @@ export class DisabledCellTemplate implements CellTemplate<DisabledCell> {
 
   render(
     cell: Compatible<DisabledCell>,
-    _isInEditMode: boolean,
-    _onCellChanged: (cell: Compatible<DisabledCell>, commit: boolean) => void,
-  ): ReactNode {
+    isInEditMode: boolean,
+    onCellChanged: (cell: Compatible<DisabledCell>, commit: boolean) => void,
+  ): React.ReactNode {
     return <div className="rg-disabled-cell">{cell.text}</div>;
   }
 }

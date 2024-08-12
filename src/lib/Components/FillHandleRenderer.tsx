@@ -1,11 +1,13 @@
+import * as React from "react";
+
 import { FillHandle } from "./FillHandle";
 import { PaneContentChild, Range } from "../../core";
 import { CellSelectionBehavior } from "../Behaviors/CellSelectionBehavior";
 
-export const FillHandleRenderer = ({
+export const FillHandleRenderer: React.FC<PaneContentChild> = ({
   state,
   calculatedRange,
-}: PaneContentChild) => {
+}) => {
   return (
     <>
       {state.selectedRanges[state.activeSelectedRangeIdx] &&

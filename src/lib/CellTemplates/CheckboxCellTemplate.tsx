@@ -1,5 +1,5 @@
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCellProperty } from "../Functions/getCellProperty";
 import { keyCodes } from "../Functions/keyCodes";
@@ -41,9 +41,9 @@ export class CheckboxCellTemplate implements CellTemplate<CheckboxCell> {
   handleKeyDown(
     cell: Compatible<CheckboxCell>,
     keyCode: number,
-    _ctrl: boolean,
+    ctrl: boolean,
     shift: boolean,
-    _alt: boolean,
+    alt: boolean,
   ): { cell: Compatible<CheckboxCell>; enableEditMode: boolean } {
     if (!shift && (keyCode === keyCodes.SPACE || keyCode === keyCodes.ENTER))
       return {
@@ -76,9 +76,9 @@ export class CheckboxCellTemplate implements CellTemplate<CheckboxCell> {
 
   render(
     cell: Compatible<CheckboxCell>,
-    _isInEditMode: boolean,
+    isInEditMode: boolean,
     onCellChanged: (cell: Compatible<CheckboxCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     return (
       <label>
         <input

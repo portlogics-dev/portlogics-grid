@@ -1,16 +1,92 @@
+import * as React from "react";
 import {
+  CellMatrix,
   getReactGridOffsets,
-  getStickyOffset,
-} from "../../Functions/elementSizeHelpers";
-import {
   getScrollOfScrollableElement,
+  getStickyOffset,
   getTopScrollableElement,
-} from "../../Functions/scrollHelpers";
-import { CellMatrix } from "../../Model/CellMatrix";
-import { Location } from "../../Model/InternalModel";
-import { State } from "../../Model/State";
+} from "src/core";
 
-import { CellEditorOffset, PositionState } from ".";
+import { useReactGridState } from "./StateProvider";
+import { calculateCellEditorPosition } from "../Functions/cellEditorCalculator";
+import { tryAppendChange } from "../Functions/tryAppendChange";
+import { Location } from "../Model/InternalModel";
+import { Compatible, Cell } from "../Model/PublicModel";
+import { State } from "../Model/State";
+
+export interface CellEditorOffset<TState extends State = State> {
+  top: number;
+  left: number;
+  state: TState;
+  location: Location;
+}
+
+interface CellEditorProps {
+  cellType: string;
+  style: React.CSSProperties;
+}
+
+export interface PositionState<TState extends State = State> {
+  state: TState;
+  location: Location;
+}
+
+export const CellEditorRenderer: React.FC = () => {
+  const state = useReactGridState();
+  const { currentlyEditedCell, focusedLocation: location } = state;
+
+  const renders = React.useRef(0);
+
+  const [position, dispatch] = React.useReducer(
+    calculateCellEditorPosition as (options: PositionState) => any,
+    { state, location },
+  ); // used to lock cell editor position
+
+  React.useEffect(() => {
+    renders.current += 1;
+    dispatch();
+  }, []);
+
+  if (!currentlyEditedCell || !location || renders.current === 0) {
+    // prevents to unexpectly opening cell editor on cypress
+    return null;
+  }
+
+  const cellTemplate = state.cellTemplates[currentlyEditedCell.type];
+  return (
+    <CellEditor
+      cellType={currentlyEditedCell.type}
+      style={{
+        top: position.top && position.top - 1,
+        left: position.left && position.left - 1,
+        height: location.row.height + 1,
+        width: location.column.width + 1,
+        position: "fixed",
+      }}
+    >
+      {cellTemplate.render(
+        currentlyEditedCell,
+        true,
+        (cell: Compatible<Cell>, commit: boolean) => {
+          state.currentlyEditedCell = commit ? undefined : cell;
+          if (commit) state.update((s) => tryAppendChange(s, location, cell));
+        },
+      )}
+    </CellEditor>
+  );
+};
+
+const CellEditor: React.FC<CellEditorProps> = ({
+  style,
+  cellType,
+  children,
+}) => {
+  return (
+    <div className={`rg-celleditor rg-${cellType}-celleditor`} style={style}>
+      {children}
+    </div>
+  );
+};
 
 const calculatedXAxisOffset = (location: Location, state: State) => {
   const cellMatrix = state.cellMatrix;

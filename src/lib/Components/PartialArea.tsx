@@ -1,20 +1,20 @@
-import { CSSProperties } from "react";
+import * as React from "react";
 
 import { Range } from "../../core";
 
 export interface PartialAreaProps {
   range: Range;
   pane: Range;
-  style: CSSProperties;
+  style: React.CSSProperties;
   className?: string;
 }
 
-export const PartialArea = ({
+export const PartialArea: React.FC<PartialAreaProps> = ({
   range,
   pane,
   style,
   className,
-}: PartialAreaProps) => {
+}) => {
   const top =
     range.first.row.idx <= pane.first.row.idx
       ? pane.first.row.top

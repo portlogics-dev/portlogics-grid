@@ -1,5 +1,5 @@
 // NOTE: all modules imported below may be imported from '@silevis/reactgrid'
-import { ReactNode } from "react";
+import * as React from "react";
 
 import { getCharFromKey } from "./getCharFromKeyCode";
 import { isAlphaNumericKey, isNavigationKey } from "./keyCodeCheckings";
@@ -17,7 +17,7 @@ export interface EmailCell extends Cell {
   type: "email";
   text: string;
   validator?: (text: string) => boolean;
-  renderer?: (text: string) => ReactNode;
+  renderer?: (text: string) => React.ReactNode;
   errorMessage?: string;
 }
 
@@ -81,7 +81,7 @@ export class EmailCellTemplate implements CellTemplate<EmailCell> {
     cell: Compatible<EmailCell>,
     isInEditMode: boolean,
     onCellChanged: (cell: Compatible<EmailCell>, commit: boolean) => void,
-  ): ReactNode {
+  ): React.ReactNode {
     if (!isInEditMode) {
       const isValid = cell.validator ? cell.validator(cell.text) : true;
       const textToDisplay =

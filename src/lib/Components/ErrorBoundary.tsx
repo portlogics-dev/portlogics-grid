@@ -1,13 +1,13 @@
-import { Component, ErrorInfo, ReactNode, PropsWithChildren } from "react";
+import React, { Component, ErrorInfo } from "react";
 
 interface ErrorBoundaryState {
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: React.ErrorInfo;
   hasError: boolean;
 }
 
 export class ErrorBoundary extends Component<
-  PropsWithChildren,
+  Record<string, unknown>,
   ErrorBoundaryState
 > {
   state: ErrorBoundaryState = {
@@ -25,7 +25,7 @@ export class ErrorBoundary extends Component<
     this.setState({ errorInfo });
   }
 
-  render(): ReactNode {
+  render(): React.ReactNode {
     const { hasError, errorInfo, error } = this.state;
 
     if (hasError) {

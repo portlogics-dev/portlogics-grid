@@ -1,13 +1,15 @@
+import * as React from "react";
+
 import { ErrorBoundary } from "./ErrorBoundary";
 import { HiddenElement } from "./HiddenElement";
 import { useReactGridState } from "./StateProvider";
 import { isBrowserFirefox } from "../Functions/firefox";
 import { GridRendererProps } from "../Model/InternalModel";
 
-export const GridRenderer = ({
+export const GridRenderer: React.FC<GridRendererProps> = ({
   eventHandlers,
   children,
-}: GridRendererProps) => {
+}) => {
   const { cellMatrix, props } = useReactGridState();
   const sharedStyles = {
     width: props?.enableFullWidthHeader ? "100%" : cellMatrix.width,

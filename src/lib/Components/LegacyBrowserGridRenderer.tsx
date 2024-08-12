@@ -1,8 +1,10 @@
+import * as React from "react";
+
 import { useReactGridState } from "./StateProvider";
 import { i18n } from "../Functions/i18n";
 import { GridRendererProps } from "../Model/InternalModel";
 
-export const LegacyBrowserGridRenderer = (_props: GridRendererProps) => {
+export const LegacyBrowserGridRenderer: React.FC<GridRendererProps> = () => {
   const state = useReactGridState();
   return (
     <>
