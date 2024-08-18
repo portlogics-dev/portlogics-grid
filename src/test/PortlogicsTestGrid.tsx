@@ -2,7 +2,13 @@ import "./theming-test.scss";
 import * as React from "react";
 
 import portData from "./data.json";
+import {
+  CustomDropdownCell,
+  CustomDropdownCellTemplate,
+} from "./dropdownCell/DropdownCellTemplate";
 import { flattenData } from "./flattenData";
+import prodCols from "./prod_col.json";
+import prodRows from "./prod_row.json";
 import { TestConfig } from "./testEnvConfig";
 import { TestGridOptionsSelect } from "./TestGrid";
 import {
@@ -21,10 +27,74 @@ import {
   ChevronCell,
   Range,
   ReactGridInstance,
+  OptionType,
 } from "../reactgrid";
 
-export type GridRow = Row<DefaultCellTypes>;
+export type GridRow = Row<DefaultCellTypes | CustomDropdownCell>;
 
+type ProdRowData = [
+  | {
+      rowId: "header";
+      cells: [
+        {
+          type: "header";
+          text: string;
+        },
+      ];
+    }
+  | {
+      rowId: number;
+      groupId: number;
+      cells: [
+        | {
+            type: "text";
+            text: string | null;
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "dropdown";
+            selectedValue?: string | { id: number; text: string };
+            values?: OptionType[];
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "search";
+            value: {
+              id: number;
+              text: string;
+            } | null;
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "dateTime";
+            date: string | null;
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "checkbox";
+            checked: boolean;
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "email";
+            text: string;
+            key: string | null;
+            nonEditable: boolean;
+          }
+        | {
+            type: "date";
+            date: string;
+            key: string | null;
+            nonEditable: boolean;
+          },
+      ];
+    },
+];
 export interface TestGridProps {
   enableSticky?: boolean;
   enableColumnAndRowSelection?: boolean;
@@ -51,9 +121,36 @@ export const TestGrid = ({
 
   const { rows: portRows, columns: portColumns } = flattenData(portData);
 
-  const [columns, setColumns] = React.useState(portColumns);
+  const [columns, setColumns] = React.useState(prodCols);
 
-  const [rows, setRows] = React.useState(portRows);
+  const prodRowData = prodRows as ProdRowData;
+  const [rows, setRows] = React.useState<GridRow[]>(
+    prodRowData.map((row) => ({
+      ...row,
+      cells: row.cells.map((cell) => {
+        switch (cell.type) {
+          case "text":
+            return {
+              ...cell,
+              text: cell.text ?? "",
+            };
+          case "dropdown":
+            return {
+              ...cell,
+              selectedValue: cell.selectedValue ?? undefined,
+              values: cell.values || [],
+            };
+          case "date":
+            return {
+              ...cell,
+              date: new Date(cell.date ?? ""),
+            };
+          default:
+            return cell;
+        }
+      }),
+    })) as GridRow[],
+  );
 
   const handleColumnResize = (
     columnId: Id,
@@ -329,6 +426,7 @@ export const TestGrid = ({
             onSelectionChanged={handleSelectionChanged}
             onSelectionChanging={handleSelectionChanging}
             moveRightOnEnter={config.moveRightOnEnter}
+            customCellTemplates={{ dropdown: new CustomDropdownCellTemplate() }}
           />
         )}
       </div>
@@ -364,8 +462,11 @@ const BulletinBoard = () => {
             <td>DisabledCellTemplate</td>
             <td>완료</td>
             <td>
-              같은 오더 그룹일 경우 해당 그룹 첫번째 행 제외 나머지 셀은
-              disabled
+              <del>
+                같은 오더 그룹일 경우 해당 그룹 첫번째 행 제외 나머지 셀은
+                disabled
+              </del>
+              <p>disabled 셀에서 nonEditable 속성으로 변경. 기능은 똑같음</p>
             </td>
           </tr>
           <tr>

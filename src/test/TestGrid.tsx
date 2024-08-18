@@ -53,19 +53,19 @@ const emailValidator: TextCell["validator"] = (email) => {
   return email_regex.test(email.replace(/\s+/g, ""));
 };
 
-const myNumberFormat = new Intl.NumberFormat("pl", {
+const myNumberFormat = new Intl.NumberFormat("ko", {
   style: "currency",
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-  currency: "PLN",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+  currency: "KRW",
 });
-const myDateFormat = new Intl.DateTimeFormat("pl", {
+const myDateFormat = new Intl.DateTimeFormat("ko", {
   weekday: "short",
   year: "numeric",
   month: "long",
   day: "numeric",
 });
-const myTimeFormat = new Intl.DateTimeFormat("pl", {
+const myTimeFormat = new Intl.DateTimeFormat("ko", {
   hour: "2-digit",
   minute: "2-digit",
 });
@@ -233,9 +233,8 @@ export const TestGrid = ({
             };
           case 4:
             return {
-              type: "date",
-              format: myDateFormat,
-              date: new Date(now.setHours(ri * 24, 0, 0, 0)),
+              type: "dateTime",
+              dateTime: new Date(now.setHours(now.getHours() + ri)),
             };
           case 5:
             return {
@@ -266,7 +265,7 @@ export const TestGrid = ({
               type: "dropdown",
               values: [
                 { value: "react", label: "React" },
-                { value: "vue", label: "Vue" },
+                { value: "vue", label: "Vue", isDisabled: true },
                 { value: "angular", label: "Angular" },
               ],
               currentValue: "react",

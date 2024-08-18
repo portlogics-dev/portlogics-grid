@@ -65,14 +65,14 @@ export function focusLocation(
     validatedFocusLocation,
   );
 
-  if (cell.type === "disabled") {
+  if (cell.nonEditable) {
     const editableFocusLocationX =
       location.row.groupId &&
       state.cellMatrix.rowGroups[location.row.groupId].find(
-        (row) => row.cells[location.column.idx].type !== "disabled",
+        (row) => !row.cells[location.column.idx].nonEditable,
       )?.rowId;
 
-    const disabledCellFocusLocation = editableFocusLocationX
+    const nonEditableCellFocusLocation = editableFocusLocationX
       ? state.cellMatrix.getLocationById(
           editableFocusLocationX,
           location.column.columnId,
@@ -81,7 +81,7 @@ export function focusLocation(
 
     return {
       ...state,
-      focusedLocation: disabledCellFocusLocation, // 클릭된 셀의 행에서 동일한 그룹 중 첫번째 disabled가 아닌 셀
+      focusedLocation: nonEditableCellFocusLocation, // 클릭된 셀의 행에서 동일한 그룹 중 첫번째 nonEditable이 아닌 셀
       selectedRanges: [],
       selectedRowGroups: selectedRowGroups ? [selectedRowGroups] : [],
       currentlyEditedCell: undefined,

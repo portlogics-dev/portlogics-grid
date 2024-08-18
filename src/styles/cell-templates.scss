@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .rg-celleditor-input {
     width: 100%;
     height: 100%;
@@ -46,10 +48,14 @@
         font-size: 0.8em;
     }
 
-    &.rg-disabled-cell {
-        background-color: $template-disabled-bg-color;
-        color: $template-disabled-text-color;
+    &.rg-cell-nonEditable {
+        background-color: $template-nonEditable-bg-color !important;
+        color: $template-nonEditable-text-color;
         cursor: not-allowed;
+
+        label input:checked~span {
+            background-color: rgba($primary-color, 0.5) !important;
+        }
     }
 
     &.rg-chevron-cell {

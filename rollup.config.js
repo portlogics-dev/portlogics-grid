@@ -25,7 +25,7 @@ const plugins = [
     exclude: ["src/test/**/*"],
   }),
   externals({
-    devDeps: true,
+    devDeps: false,
   }),
   resolve(),
   commonjs(),

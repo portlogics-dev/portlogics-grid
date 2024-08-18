@@ -91,8 +91,7 @@ export class CellMatrix {
     // when? rowGroups 자체를 외부로부터 100% 의존하기에는 프로그램 설계 상 아구가 맞지 않다. 내부에서 계산해 저장한다.
     // how? 셀마다 groupId를 넣어줄 필요가 있나? row 레벨에서 groupId를 가지고 있으면 되는거 아닌가?
     // disabled는 셀마다 구별돼야하는게 맞음. 하지만 groupSelection은 cell 레벨까지 내려갈 필요가 전혀 없음
-    // 그러면 cell에선 groupId를 뺴고, 서버 데이터 구조를 Row<DefaultCellTypes | DisabledCell> 타입으로 구성하면 된다
-    // 지금은 getRow()에서 row마다 groupId를 집어넣어주고, 서버 데이터 양식에 올려두자
+    // 그러면 cell에선 groupId를 뺴고, cell 내부의 기존 nonEditable 속성을 사용해 disabled를 구현한다
     const rowGroupId = focusedLocation.row.groupId;
 
     if (rowGroupId !== undefined && Number.isInteger(rowGroupId)) {

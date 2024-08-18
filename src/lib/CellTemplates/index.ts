@@ -7,6 +7,6 @@ export * from "./NumberCellTemplate";
 export * from "./TextCellTemplate";
 export * from "./TimeCellTemplate";
 export * from "./DropdownCellTemplate";
-export * from "./DisabledCellTemplate";
 export * from "./keyCodeCheckings";
 export * from "./getCharFromKeyCode";
+export * from "./DateTimeCellTemplate";
