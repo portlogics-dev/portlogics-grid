@@ -8,7 +8,7 @@ import {
   NumberCellTemplate,
   TextCellTemplate,
   DropdownCellTemplate,
-  DisabledCellTemplate,
+  DateTimeCellTemplate,
 } from "../CellTemplates";
 import { CellTemplates } from "../Model/PublicModel";
 
@@ -22,5 +22,5 @@ export const defaultCellTemplates: CellTemplates = {
   time: new TimeCellTemplate(),
   chevron: new ChevronCellTemplate(),
   dropdown: new DropdownCellTemplate(),
-  disabled: new DisabledCellTemplate(),
+  dateTime: new DateTimeCellTemplate(),
 };

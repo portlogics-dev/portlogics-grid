@@ -30,11 +30,14 @@ export function flattenData(data: DataNode[]): {
     { columnId: "CONTAINER_NUMBER", width: 150, resizable: true },
   ];
 
-  function initializeRow(data: Omit<DataNode, "children">, disabled?: boolean) {
+  function initializeRow(
+    data: Omit<DataNode, "children">,
+    nonEditable?: boolean,
+  ) {
     return Object.fromEntries(
       Object.entries(data).map(([key, value]) => [
         key,
-        { value, disabled: disabled ?? false },
+        { value, nonEditable: nonEditable ?? false },
       ]),
     );
   }
@@ -46,29 +49,29 @@ export function flattenData(data: DataNode[]): {
 
     if (!children || children.length === 0) {
       result.push({
-        ...{ index: { value: rowIndex, disabled: false }, groupId },
+        ...{ index: { value: rowIndex, nonEditable: false }, groupId },
         ...indexedRowWithoutChildren,
       });
       rowIndex++;
       return;
     }
 
-    const disabledRow = initializeRow(parentProps, true);
+    const nonEditableRow = initializeRow(parentProps, true);
 
     children.forEach((child, index) => {
       const { children: childChildren, ...childProps } = child;
-      // 첫번째 행은 disabled: false, 나머지는 disabled: true
+      // 첫번째 행은 nonEditable: false, 나머지는 nonEditable: true
       const initializedChildProps = initializeRow(childProps);
       const mergedProps =
         index === 0
           ? {
-              ...{ index: { value: rowIndex, disabled: false }, groupId },
+              ...{ index: { value: rowIndex, nonEditable: false }, groupId },
               ...indexedRowWithoutChildren,
               ...initializedChildProps,
             }
           : {
-              ...{ index: { value: rowIndex, disabled: false }, groupId },
-              ...disabledRow,
+              ...{ index: { value: rowIndex, nonEditable: false }, groupId },
+              ...nonEditableRow,
               ...initializedChildProps,
             };
       result.push(mergedProps);
@@ -105,9 +108,9 @@ export function flattenData(data: DataNode[]): {
         .map(([, value], index) => {
           if (typeof value === "object" && value !== null && "value" in value) {
             return {
-              type:
-                index === 0 ? "header" : value.disabled ? "disabled" : "text",
+              type: index === 0 ? "header" : "text",
               text: String(value.value ?? ""),
+              nonEditable: value.nonEditable,
             };
           } else {
             return {

@@ -1,0 +1,527 @@
+[
+  {
+    "columnId": "order number",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "trade direction",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "incoterms",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "transportation mode",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "client",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "document closing date",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "cargo closing date",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "customs clearance request",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "cargo insurance policy",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "partner",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "mrn",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "msn",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "customs clearance classification",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "import location",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "customs",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "customs department",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure manager name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure manager phone",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure manager email",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "etd",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival manager name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival manager phone",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival manager email",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "eta",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure port",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "departure address detail",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival port",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "arrival address detail",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "shipline",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "vessel",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "voyage",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "ship onboard",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "por",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "ship delivery",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "final destination",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "flight",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "flight delivery",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "via1",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "via2",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "via3",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "forwarder manager name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Master BL",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Issuance At",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Cargo Type",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Shipper Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Shipper Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Consignee Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Consignee Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Notify Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Notify Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "House BL",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Issuance At",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Shipper Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Shipper Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Consignee Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Consignee Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Notify Name",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Notify Address",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Issue Number",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Issue Board",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Payable At",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Issued At",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Service Term",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Maritime Freight Term",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation Freight Term",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation Other",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation Currency",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation Accounting Info",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation DV Carriage",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation DV Customs",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Aviation Insurance",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Marks and Numbers",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Description of Goods",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Main Items",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Shipper Enum",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Said Enum",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "BL Type",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "EDI Status",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Container Number",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Container Size",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Container Type",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Container Item",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Packing Type",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Qty",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Net Weight",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Tare Weight",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Gross Weight",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Volume",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Rate Class",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "CBM",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Length",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Width",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Height",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "HS Code",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Part",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Main",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Note",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Demurrage",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Detention",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Storage",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "ODCY_Start",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "ODCY_End",
+    "width": 100,
+    "resizable": true
+  },
+  {
+    "columnId": "Purchase Order Number",
+    "width": 100,
+    "resizable": true
+  }
+]
