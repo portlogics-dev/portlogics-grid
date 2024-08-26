@@ -8,11 +8,13 @@ interface FeaturedCellProps {
   location: Location;
   state?: State;
   borderColor?: string;
+  backgroundColor?: string;
   className?: string;
 }
 
 export const CellHighlight: React.FC<FeaturedCellProps> = ({
   borderColor,
+  backgroundColor,
   location,
   className,
   state,
@@ -31,6 +33,7 @@ export const CellHighlight: React.FC<FeaturedCellProps> = ({
       location={location}
       className={`rg-cell-highlight ${className || ""}`}
       borderColor={borderColor}
+      backgroundColor={backgroundColor}
       width={range.width}
       height={range.height}
     />
@@ -55,7 +58,7 @@ export const CellFocus: React.FC<FeaturedCellProps> = ({
 
 const FeaturedCell: React.FC<
   FeaturedCellProps & { width: number; height: number }
-> = ({ className, location, borderColor, height, width }) => {
+> = ({ className, location, borderColor, backgroundColor, height, width }) => {
   return (
     <div
       className={className}
@@ -65,6 +68,7 @@ const FeaturedCell: React.FC<
         width: width + (location.column.left === 0 ? 0 : 1),
         height: height + (location.row.top === 0 ? 0 : 1),
         borderColor: `${borderColor}`,
+        backgroundColor: `${backgroundColor}`,
       }}
     />
   );

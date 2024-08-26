@@ -324,6 +324,8 @@ export interface Highlight {
   readonly columnId: Id;
   /** Optional border color */
   readonly borderColor?: string;
+  /** Optional background color */
+  readonly backgroundColor?: string;
   /** Optional CSS classname of the highlighted cell */
   readonly className?: string;
 }

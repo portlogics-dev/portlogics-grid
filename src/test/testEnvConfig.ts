@@ -37,7 +37,12 @@ export const config: TestConfig = {
   initialFocusLocation: { columnId: "col-1", rowId: "row-2" },
 
   highlights: [
-    { columnId: "col-1", rowId: "row-1", borderColor: "#00ff00" },
+    {
+      columnId: "col-1",
+      rowId: "row-1",
+      borderColor: "#00ff00",
+      backgroundColor: "#00ff0066",
+    },
     { columnId: "col-0", rowId: "row-1", borderColor: "red" },
   ],
 
