@@ -105,6 +105,7 @@ function renderHighlights(state: State, range: Range) {
             location={location}
             state={state}
             borderColor={highlight.borderColor}
+            backgroundColor={highlight.backgroundColor}
             className={highlight.className}
           />
         )

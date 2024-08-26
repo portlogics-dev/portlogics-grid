@@ -30,7 +30,7 @@ export function tryAppendChange(
   )
     // 수정 이전 cell과 수정 이후 cell이 다르고, nonEditable이 아닌 경우
     // 여기서 바로 cellChanges를 반영하지 않고 queuedCellChanges에 밀어넣음
-    // 이후 handleStateUpdate에서 queuedCellChanges를 처리하고 state를 업데이트
+    // 이후 handleStateUpdate에서 queuedCellChanges를 ReactGrid 컴포넌트에 주입한 handleChange props를 통과시켜 state를 업데이트
     state.queuedCellChanges.push({
       previousCell,
       newCell,

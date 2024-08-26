@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { MenuProps, OptionProps, SelectInstance } from "react-select";
+import { forwardRef, useEffect, useMemo, useRef, useState } from "react";
+import Select, { MenuProps, OptionProps, SelectInstance } from "react-select";
 import AsyncSelect from "react-select/async";
 import {
   CellTemplate,
@@ -21,6 +21,8 @@ export type CustomDropdownCell = Override<
   {
     selectedValue?: string | { id: number; text: string };
     values?: OptionType[];
+    key?: string;
+    searchType?: { key: string };
   }
 >;
 
@@ -32,7 +34,7 @@ export class CustomDropdownCellTemplate
   ): Compatible<CustomDropdownCell> {
     let selectedValue: CustomDropdownCell["selectedValue"];
     try {
-      if (typeof selectedValue === "object") {
+      if (typeof uncertainCell.selectedValue === "object") {
         selectedValue = getCellProperty(
           uncertainCell,
           "selectedValue",
@@ -48,12 +50,8 @@ export class CustomDropdownCellTemplate
       selectedValue = undefined;
     }
 
-    let values: OptionType[] = [];
-    try {
-      values = getCellProperty(uncertainCell, "values", "object");
-    } catch {
-      values = [];
-    }
+    const values: OptionType[] | undefined = uncertainCell["values"];
+
     const value =
       typeof selectedValue === "object" // typeof selectedValue === 'object' 일 경우 다뤄야 하나?
         ? parseFloat(selectedValue.text)
@@ -87,6 +85,13 @@ export class CustomDropdownCellTemplate
         ? selectedValue.text
         : selectedValue || "";
 
+    let key: string | undefined;
+    try {
+      key = getCellProperty(uncertainCell, "key", "string");
+    } catch {
+      key = undefined;
+    }
+
     return {
       ...uncertainCell,
       selectedValue,
@@ -96,6 +101,7 @@ export class CustomDropdownCellTemplate
       isDisabled,
       isOpen,
       inputValue,
+      key,
     };
   }
 
@@ -104,7 +110,7 @@ export class CustomDropdownCellTemplate
     cellToMerge: UncertainCompatible<CustomDropdownCell>,
   ): Compatible<CustomDropdownCell> {
     // update는 cell.values가 있을 때만
-    const selectedValueFromText = (cell.values as OptionType[]).some(
+    const selectedValueFromText = (cell.values as OptionType[])?.some(
       (val) => val.value === cellToMerge.text,
     )
       ? cellToMerge.text
@@ -180,12 +186,19 @@ export class CustomDropdownCellTemplate
       commit: boolean,
     ) => void,
   ): React.ReactNode {
-    return (
-      <DropdownInput
+    return cell.isDisabled ? (
+      <DisabledDropdownInput
+        cell={cell}
         onCellChanged={(cell) =>
           onCellChanged(this.getCompatibleCell(cell), true)
         }
+      />
+    ) : (
+      <ActiveDropdownInput
         cell={cell}
+        onCellChanged={(cell) =>
+          onCellChanged(this.getCompatibleCell(cell), true)
+        }
       />
     );
   }
@@ -196,16 +209,17 @@ interface DIProps {
   cell: Compatible<CustomDropdownCell>;
 }
 
-const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
+const DisabledDropdownInput = ({ cell, onCellChanged }: DIProps) => (
+  <DefaultSelect cell={cell} onCellChanged={onCellChanged} />
+);
+
+const ActiveDropdownInput = ({ onCellChanged, cell }: DIProps) => {
   const selectRef = useRef<SelectInstance<OptionType>>(null);
 
   const [inputValue, setInputValue] = useState<string | undefined>(
     cell.inputValue,
   );
-  const selectedValue = useMemo<OptionType | undefined>(
-    () => cell.values?.find((val) => val.value === cell.text),
-    [cell.text, cell.values],
-  );
+  const [isAsyncLoading, setAsyncIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     if (cell.isOpen && selectRef.current) {
@@ -214,19 +228,126 @@ const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
     }
   }, [cell.isOpen, cell.inputValue]);
 
+  const isAsyncSelect = !cell.values?.length;
+  // const SelectOrAsyncSelect = isAsyncSelect ? AsyncSelect : Select;
+
+  const loadOptions = (inputValue?: string) => {
+    setAsyncIsLoading(true);
+    return new Promise<OptionType[]>((resolve) => {
+      setTimeout(() => {
+        resolve([
+          {
+            label: "test1",
+            value: "test1",
+          },
+          {
+            label: "test2",
+            value: "test2",
+          },
+        ]);
+        setAsyncIsLoading(false);
+      }, 1000);
+    });
+  };
+
+  const AsyncSelectProps = {
+    loadOptions,
+    defaultOptions: true,
+    isLoading: isAsyncLoading,
+    cacheOptions: true,
+  };
+
+  return (
+    <DefaultSelect
+      ref={selectRef}
+      cell={cell}
+      onCellChanged={onCellChanged}
+      {...(cell.inputValue && {
+        inputValue,
+        defaultInputValue: inputValue,
+        onInputChange: (e) => setInputValue(e),
+      })}
+      {...(isAsyncSelect ? { ...AsyncSelectProps } : { options: cell.values })}
+    />
+  );
+};
+
+const CustomOption = ({
+  innerProps,
+  label,
+  isSelected,
+  isFocused,
+  isDisabled,
+}: OptionProps<OptionType, false>) => (
+  <div
+    {...innerProps}
+    onPointerDown={(e) => e.stopPropagation()}
+    className={`rg-dropdown-option${isSelected ? " selected" : ""}${
+      isFocused ? " focused" : ""
+    }${isDisabled ? " disabled" : ""}`}
+  >
+    {label}
+  </div>
+);
+
+const CustomMenu = ({ innerProps, children }: MenuProps<OptionType, false>) => (
+  <div
+    {...innerProps}
+    className="rg-dropdown-menu"
+    onPointerDown={(e) => e.stopPropagation()}
+  >
+    {children}
+  </div>
+);
+
+type DefaultSelectProps = DIProps & {
+  inputValue?: string;
+  defaultInputValue?: string;
+  onInputChange?: (e: string) => void;
+} & (
+    | { options?: OptionType[] }
+    | {
+        loadOptions?: () => Promise<OptionType[]>;
+        isLoading?: boolean;
+        cacheOptions?: boolean;
+      }
+  );
+
+const DefaultSelect = forwardRef<
+  SelectInstance<OptionType>,
+  DefaultSelectProps
+>(function DefaultSelect(
+  { onCellChanged, cell, ...additionalProps },
+  forwardedRef,
+) {
+  const selectRef = useRef<SelectInstance<OptionType>>(null);
+  // 부모 컴포넌트에서 참조할 ref의 기능을 selectRef.current로 고정시킴
+
+  const selectedValue = useMemo<OptionType | undefined>(
+    () => cell.values?.find((val) => val.value === cell.text),
+    [cell.text, cell.values],
+  );
+
+  const isAsyncSelect = !cell.values?.length;
+  const SelectOrAsyncSelect = isAsyncSelect ? AsyncSelect : Select;
+
   return (
     <div
       style={{ width: "100%" }}
-      onPointerDown={(_e) => onCellChanged({ ...cell, isOpen: true })}
+      onPointerDown={() =>
+        !cell.isDisabled && onCellChanged({ ...cell, isOpen: true })
+      }
     >
-      <AsyncSelect
-        {...(cell.inputValue && {
-          inputValue,
-          defaultInputValue: inputValue,
-          onInputChange: (e) => setInputValue(e),
-        })}
-        isSearchable={true}
+      <SelectOrAsyncSelect
+        {...additionalProps}
         ref={selectRef}
+        defaultValue={selectedValue}
+        value={selectedValue}
+        isDisabled={cell.isDisabled}
+        isSearchable={true}
+        isClearable={true}
+        blurInputOnSelect={true}
+        closeMenuOnScroll={true}
         {...(cell.isOpen !== undefined && { menuIsOpen: cell.isOpen })}
         onMenuClose={() =>
           onCellChanged({
@@ -239,22 +360,16 @@ const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
         onChange={(e) =>
           onCellChanged({
             ...cell,
-            selectedValue: (e as OptionType).value,
+            selectedValue: (e as OptionType)?.value,
             isOpen: false,
             inputValue: undefined,
           })
         }
-        blurInputOnSelect={true}
-        closeMenuOnScroll={true}
-        defaultValue={selectedValue}
-        value={selectedValue}
-        isDisabled={cell.isDisabled}
-        options={cell.values}
         onKeyDown={(e) => {
           e.stopPropagation();
 
           if (e.key === "Escape") {
-            selectRef.current?.blur();
+            selectRef?.current?.blur();
             return onCellChanged({
               ...cell,
               isOpen: false,
@@ -317,32 +432,4 @@ const DropdownInput = ({ onCellChanged, cell }: DIProps) => {
       />
     </div>
   );
-};
-
-const CustomOption = ({
-  innerProps,
-  label,
-  isSelected,
-  isFocused,
-  isDisabled,
-}: OptionProps<OptionType, false>) => (
-  <div
-    {...innerProps}
-    onPointerDown={(e) => e.stopPropagation()}
-    className={`rg-dropdown-option${isSelected ? " selected" : ""}${
-      isFocused ? " focused" : ""
-    }${isDisabled ? " disabled" : ""}`}
-  >
-    {label}
-  </div>
-);
-
-const CustomMenu = ({ innerProps, children }: MenuProps<OptionType, false>) => (
-  <div
-    {...innerProps}
-    className="rg-dropdown-menu"
-    onPointerDown={(e) => e.stopPropagation()}
-  >
-    {children}
-  </div>
-);
+});

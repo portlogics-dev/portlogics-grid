@@ -137,8 +137,9 @@ export const TestGrid = ({
           case "dropdown":
             return {
               ...cell,
-              selectedValue: cell.selectedValue ?? undefined,
-              values: cell.values || [],
+              selectedValue: cell.selectedValue,
+              values: cell.values,
+              isDisabled: cell.nonEditable, // 클릭까지 막음
             };
           case "date":
             return {
