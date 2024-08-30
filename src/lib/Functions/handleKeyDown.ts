@@ -28,6 +28,7 @@ import { keyCodes } from "../../lib";
 import { KeyboardEvent } from "../Model/domEventsTypes";
 import { State } from "../Model/State";
 
+// 외부에서 호출되는 함수로, 키보드 이벤트를 처리하고 새로운 상태를 반환합니다.
 export function handleKeyDown(state: State, event: KeyboardEvent): State {
   const newState = handleKeyDownInternal(state, event);
   if (newState !== state) {
@@ -38,6 +39,7 @@ export function handleKeyDown(state: State, event: KeyboardEvent): State {
 }
 
 // TODO: rewrite/simplify if possible
+// 키보드 이벤트를 내부적으로 처리하는 함수로, 다양한 키보드 입력에 따라 상태를 업데이트합니다.
 function handleKeyDownInternal(state: State, event: KeyboardEvent): State {
   const location = state.focusedLocation;
   if (!location) {
@@ -265,6 +267,7 @@ function handleKeyDownInternal(state: State, event: KeyboardEvent): State {
   return state;
 }
 
+// 선택된 범위 내에서 포커스를 이동시키는 함수입니다.
 function moveFocusInsideSelectedRange(
   state: State,
   direction: "left" | "right" | "up" | "down",
@@ -351,6 +354,7 @@ function moveFocusInsideSelectedRange(
   }
 }
 
+// 현재 상태에서 보이는 영역의 높이를 계산합니다.
 function getVisibleHeight(state: State): number {
   const { stickyBottomRange, stickyTopRange } = state.cellMatrix.ranges;
   const wholeStickyHeight = stickyBottomRange.height + stickyTopRange.height;
@@ -361,6 +365,7 @@ function getVisibleHeight(state: State): number {
   return visibleScrollAreaHeight;
 }
 
+// 선택 영역을 페이지 다운 키 입력에 따라 조정합니다.
 function resizeSelectionPageDown(
   state: State,
   asr: Range,
@@ -448,6 +453,7 @@ function resizeSelectionPageDown(
     : state;
 }
 
+// 선택 영역을 페이지 업 키 입력에 따라 조정합니다.
 function resizeSelectionPageUp(
   state: State,
   asr: Range,
@@ -539,6 +545,7 @@ function resizeSelectionPageUp(
     : state;
 }
 
+// 선택 영역을 위쪽으로 조정합니다.
 function resizeSelectionUp(
   state: State,
   asr: Range,
@@ -565,6 +572,7 @@ function resizeSelectionUp(
     : state;
 }
 
+// 선택 영역을 아래쪽으로 조정합니다.
 function resizeSelectionDown(
   state: State,
   asr: Range,
@@ -595,6 +603,7 @@ function resizeSelectionDown(
     : state;
 }
 
+// 선택 영역을 왼쪽으로 조정합니다.
 function resizeSelectionLeft(
   state: State,
   asr: Range,
@@ -621,6 +630,7 @@ function resizeSelectionLeft(
     : state;
 }
 
+// 선택 영역을 오른쪽으로 조정합니다.
 function resizeSelectionRight(
   state: State,
   asr: Range,
@@ -651,6 +661,7 @@ function resizeSelectionRight(
     : state;
 }
 
+// 선택 영역을 주어진 인덱스와 방향에 따라 조정합니다.
 function resizeSelection(
   state: State,
   firstColIdx: number,
