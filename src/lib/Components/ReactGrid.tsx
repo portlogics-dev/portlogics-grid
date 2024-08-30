@@ -71,7 +71,8 @@ export class ReactGrid extends React.Component<ReactGridProps, State> {
       if (
         prevState.selectedIds.length === 0 &&
         prevState.selectedIndexes.length === 0 &&
-        prevState.selectedRanges.length === 0
+        prevState.selectedRanges.length === 0 &&
+        prevState.selectedRowGroups.length === 0
       ) {
         return null;
       }
@@ -79,6 +80,7 @@ export class ReactGrid extends React.Component<ReactGridProps, State> {
         selectedIds: [],
         selectedIndexes: [],
         selectedRanges: [],
+        selectedRowGroups: [],
       };
     });
   };
